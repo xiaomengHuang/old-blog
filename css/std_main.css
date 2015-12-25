@@ -1,0 +1,4 @@
+body,html,.row{margin: 0;padding: 0;}
+html,p{font-family: "微软雅黑", "黑体", sans-serif;}
+#std_body{margin-left: 8%;margin-top: 40px;}
+#std_body div{margin-left: 20px;}

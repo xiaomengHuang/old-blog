@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="css/mainstyle.css" rel="stylesheet" />
+    <link href="css/bootstrap.css" rel="stylesheet"/>
+    <link href="css/newblog.css" rel="stylesheet"/>
+    <script src="js/jquery-1.10.2.min.js" ></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/markdown.min.js"></script>
+    <title>新建博文</title>
+</head>
+<body>
+<div class="container-fluid row" id="add_blog">
+    <div class=" m_container" >
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="" id="nav_link">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="">NoobFan</a>
+                    </div>
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">主页 <span class="sr-only">(current)</span></a></li>
+                        <li><a href="#">新闻</a></li>
+                        <li><a href="#">博客</a></li>
+                        <li><a href="#">技术</a></li>
+                        <li><a href="#">博客</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="col-md-2 col-lg-2" >
+            <div id="newblog_left">
+                <h2>博文信息</h2>
+                <hr />
+                <form>
+                    <div class="form-group">
+                        <label >博文名称</label>
+                        <input autofocus="autofocus" type="text" class="form-control" placeholder="请输入博文名称">
+                    </div>
+                    <div class="form-group">
+                        <label >插图路径</label>
+                       <input type="text" class="form-control" placeholder="输入配图路径">
+                    </div>
+                    <div class="form-group">
+                        <label >作者</label>
+                        <input type="text" class="form-control" placeholder="作者">
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-default">发布</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+        <div class="col-md-4 col-lg-4" >
+            <div class="panel panel-default">
+                <div class="panel-body" >
+                    <textarea id="m_input" placeholder="开始编辑你的markdown文档吧"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-6" >
+            <div id="m_body">
+            </div>
+        </div>
+    </div>
+    <script>
+        window.onload=function(){
+            changeDivHeight();
+        };
+        //当浏览器窗口大小改变时，设置显示内容的高度
+        window.onresize=function(){
+            changeDivHeight();
+        };
+        function changeDivHeight(){
+            var h = document.documentElement.clientHeight;//获0.取页面可见高度
+            document.getElementById("m_input").style.height=h-60+"px";
+            document.getElementById("m_body").style.height=h-60+"px";}
+    </script>
+</div>
+<script>
+    $('#m_input').bind('input propertychange', function() {
+        var html = $(this).val();
+        var h_body = markdown.toHTML(html);
+        $('#m_body').html(h_body);
+    });
+</script>
+</body>
+</html>

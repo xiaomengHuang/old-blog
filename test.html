@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/github.js" ></script>
+</head>
+<body>
+<script>
+    var git = new Github({username:"noobfan",password:"fzm269567",auth:"basic"});
+    var repo = git.getRepo("noobfan","noobfan.github.io");
+    //得到链接信息，乱七八糟的东西
+    //repo.show(function(err,repo){
+    //    console.log(repo);
+   // });
+    //不能获取列表，目前
+    //var state = 'all'; //or 'closed', or 'all'
+   // repo.listPulls(state, function(err, pullRequests) {
+   //     console.log('--2---'+pullRequests);
+   // });
+
+
+    //文件的写读操作
+      var options = {
+        author: {name: 'kevin', email: 'author@example.com'},
+        committer: {name: 'kevin', email: 'committer@example.com'},
+        encode: true // Whether to base64 encode the file. (default: true)
+    };
+     /* //写文件 OK
+    repo.write('master', 'test.txt', '写入信息', 'kevin', options, function(err) {});
+       //读文件 OK
+    repo.read('master', 'www/home/index.html', function(err, data) {
+        console.log(data);
+    });*/
+
+    //文件的移动操作 未实现
+    /*repo.move('master', 'test.txt', 'ttt.txt', function(err) {
+        if(err){
+            console.log(err);
+        }
+    });*/
+    //文件的删除 OK
+    /* repo.remove('master', '文件名.txt', function(err) {
+        if(err){
+            console.log(err);
+        }
+    });*/
+
+    //获取提交信息 NO
+    //repo.getCommit('master', options.sha, function(err, commit) {});
+
+    //获取根目录树结构 ，tree[0].type  树或者节点(blob\tree) OK
+    /*repo.getTree('master', function(err, tree) {
+        console.log(tree);
+    });
+    //获取全部树结构，但是是在一个数组里面连续排列，不方便  OK
+    repo.getTree('master?recursive=true', function(err, tree) {
+        console.log(tree);
+    });*/
+
+    //获取 SHA（不知道啥东西）　获取可以实现，但是应用函数获取提交信息报错：not found
+    /*repo.getSha('master', 'test.txt', function(err, sha) {
+        console.log(sha);
+        repo.getCommit('master', sha, function(err, commit) {
+            if(err){
+                console.log(err);
+            }
+            console.log(commit);
+        });
+    });*/
+
+
+    /* //For a given reference, get the corresponding commit sha. ||不知道干啥用||
+    repo.getRef('heads/master', function(err, sha) {
+        console.log(sha);
+    });
+    //新建一个对比
+    var refSpec = {
+        "ref": "refs/heads/my-new-branch-name",
+        "sha": "827efc6d56897b048c772eb4087f854f46256132"
+    };
+    repo.createRef(refSpec, function(err) {});
+    //删除
+    repo.deleteRef('heads/gh-pages', function(err) {});
+    */
+
+    //获取创建人信息。OK
+    /*repo.contributors(function(err, data) {
+        console.log(data);
+    });*/
+
+
+
+    //***********************************User API ********************
+    var user = git.getUser();
+    //获取用户信息  各种URL
+    //user.repos(options, function(err, repos) {console.log(repos);});
+    //获取组织列表，本站点测试获取到为空
+    //user.orgs(function(err, orgs) { console.log(orgs);});
+    //获取用户的认证信息，本站为空
+    //user.gists(function(err, gists) {console.log(gists);});
+    //获取纬度通知，for认证用户
+    //user.notifications(options, function(err, notifications) {console.log(notifications);});
+    //用户信息
+    //user.show('noobfan', function(err, user) {console.log(user);});
+    //用户库 信息
+    //user.userRepos('noobfan', function(err, repos) {console.log(repos[0]);});
+    //特殊用户的库信息///或者用户的
+    //user.userStarred('noobfan', function(err, repos) {console.log(repos);});
+
+
+
+</script>
+
+</body>
+</html>
