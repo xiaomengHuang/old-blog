@@ -1,5 +1,7 @@
 body{margin: 0;padding: 0;}
-
+.zhanwei{
+    visibility: hidden;
+}
 .row div{margin: 0;padding: 0;}
 #nav_link{font-size: 20px;font-family: "微软雅黑", "黑体", sans-serif ;}
 #nav_link ul{width: 80%;}
@@ -13,10 +15,10 @@ body{margin: 0;padding: 0;}
 
 .body_header{height: 174px;background: white;}
 .body_header .body_header_right{height: 100%;width: 100%;
-    background: rgba(0,0,0,0.7);
+    background: #A8916B;
     text-align: center;}
-.body_header .body_header_left {height: 174px;background: rgba(0,0,0,0.6);text-align: center;}
-.body_header .body_header_right h1,.body_header .body_header_left h2{color: white;margin-top: 0;padding-top: 70px;}
+.body_header .body_header_left {height: 174px;background: #A8916B;text-align: center;}
+.body_header .body_header_right h2,.body_header .body_header_left h2{color: white;margin-top: 0;padding-top: 70px;}
 .body_header .body_header_left h4{color: white;}
 
 .list2{margin-top: 20px;}
