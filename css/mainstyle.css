@@ -35,7 +35,9 @@ margin-bottom: 10px;}
 .list2_right hr,.list3 hr{border-top: 1px solid rgba(0,0,0,0.5);}
 .list3{text-align: center;}
 .list3 .list_part{margin-left: 34px;}
-
+.list2_right h4{
+    word-break: break-all;
+}
 footer{ height: 140px;width: 100%;background: rgba(0,0,0,0.7);}
 
 /*login_part*/
