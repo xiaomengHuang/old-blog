@@ -22,7 +22,10 @@ body{margin: 0;padding: 0;}
 .body_header .body_header_left h4{color: white;}
 
 .list2{margin-top: 20px;}
-article{background: white;padding: 30px;margin-top: 30px;}
+article{background: white;padding: 30px;margin-top: 30px;border: 1px solid transparent;}
+.list2 article:hover{
+    border:1px solid #38B03F;
+}
 article .article_p{margin-top: 14px;}
 article img{width: 100%;height: 100%;}
 article h4{margin-top: 10px;}

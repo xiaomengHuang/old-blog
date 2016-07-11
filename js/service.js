@@ -24,6 +24,7 @@
              for(x in info){
                  var data = {};
                  data.title = info[x].artName;
+                 data.editor = info[x].artUser;
                  data.detail = info[x].artDetail.split('##');
                  data.src = info[x].artSrc;
                  $scope.article.push(data);
