@@ -52,10 +52,10 @@
                         <span>作者:<a class="index_author">黄晓萌</a></span>
                     </div>
                     <div>
-                        <img src="lib/img/newhome.jpg" />
+                        <img ng-src="{{articles.src}}" />
                     </div>
                     <div class="article_p">
-                        <p><span class="zhanwei">站位</span>{{articles.detail}}
+                        <p ng-repeat="detail in articles.detail"><span class="zhanwei">站位</span>{{detail}}
                         </p>
                     </div>
                 </article>

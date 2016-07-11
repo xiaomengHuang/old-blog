@@ -24,12 +24,15 @@
              for(x in info){
                  var data = {};
                  data.title = info[x].artName;
-                 data.detail = info[x].artDetail;
+                 data.detail = info[x].artDetail.split('##');
+                 data.src = info[x].artSrc;
                  $scope.article.push(data);
              }
              $scope.$apply($scope.article);
          }).catch(function(err){
              console.log(err);
          });
+
+
     });
 }();
