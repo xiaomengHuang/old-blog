@@ -5,8 +5,12 @@
     <title>Title</title>
     <script src="js/jquery-1.10.2.min.js"></script>
     <script src="js/github.js" ></script>
+    <script src="js/test.js"></script>
 </head>
 <body>
+<div id="tttt">
+
+</div>
 <script>
     var git = new Github({username:"noobfan",password:"fzm269567",auth:"basic"});
     var repo = git.getRepo("noobfan","noobfan.github.io");
@@ -27,12 +31,12 @@
         committer: {name: 'kevin', email: 'committer@example.com'},
         encode: true // Whether to base64 encode the file. (default: true)
     };
-     /* //写文件 OK
-    repo.write('master', 'test.txt', '写入信息', 'kevin', options, function(err) {});
+      //写文件 OK
+//    repo.write('master', 'test.txt', '写入信息', 'kevin', options, function(err) {});
        //读文件 OK
     repo.read('master', 'www/home/index.html', function(err, data) {
         console.log(data);
-    });*/
+    });
 
     //文件的移动操作 未实现
     /*repo.move('master', 'test.txt', 'ttt.txt', function(err) {
@@ -112,6 +116,11 @@
 
 
 </script>
-
+<script>
+    $(document).ready(function(){
+//        $('#tttt').pluginName('publicMethod');
+        $('#tttt').pluginName({'text':'dasd','main':'me'});
+    })
+</script>
 </body>
 </html>
