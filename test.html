@@ -12,8 +12,8 @@
 
 </div>
 <script>
-    var git = new Github({username:"noobfan",password:"fzm269567",auth:"basic"});
-    var repo = git.getRepo("noobfan","noobfan.github.io");
+    var git = new Github({username:"526371075@qq.com",password:"q2670187",auth:"basic"});
+    var repo = git.getRepo("noobfan-kevin","noobfan-kevin.github.io");
     //得到链接信息，乱七八糟的东西
     //repo.show(function(err,repo){
     //    console.log(repo);
@@ -34,7 +34,7 @@
       //写文件 OK
 //    repo.write('master', 'test.txt', '写入信息', 'kevin', options, function(err) {});
        //读文件 OK
-    repo.read('master', 'www/home/index.html', function(err, data) {
+    repo.read('master', 'dataFile/indexData.json', function(err, data) {
         console.log(data);
     });
 
