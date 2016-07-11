@@ -35,7 +35,7 @@
 //    repo.write('master', 'test.txt', '写入信息', 'kevin', options, function(err) {});
        //读文件 OK
     repo.read('master', 'dataFile/indexData.json', function(err, data) {
-        console.log(data);
+        console.log(JSON.parse(data));
     });
 
     //文件的移动操作 未实现
