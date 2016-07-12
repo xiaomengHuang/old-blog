@@ -17,51 +17,51 @@
         var _data = [
             {
                 value: 10,
-                color:"#f1f1f1"
+                color:"#F1A325"
             },
             {
                 value : 10,
-                color : "#f1f1f1"
+                color : "#F1A325"
             },
             {
                 value : 10,
-                color : "#f1f1f1"
+                color : "#F1A325"
             },
             {
                 value : 10,
-                color : "#f1f1f1"
+                color : "#F1A325"
             },
             {
                 value : 10,
-                color : "#f1f1f1"
+                color : "#F1A325"
             },
             {
                 value: 10,
-                color:"#f1f1f1"
+                color:"#F1A325"
             },
             {
                 value : 10,
-                color : "#f1f1f1"
+                color : "#F1A325"
             },
             {
                 value : 10,
-                color : "#f1f1f1"
+                color : "#F1A325"
             },
             {
                 value : 10,
-                color : "#f1f1f1"
+                color : "#F1A325"
             },
             {
                 value : 10,
-                color : "#f1f1f1"
+                color : "#F1A325"
             },
             {
                 value : 10,
-                color : "#f1f1f1"
+                color : "#F1A325"
             },
             {
                 value : 10,
-                color : "#f1f1f1"
+                color : "#F1A325"
             }
 
         ];
@@ -122,7 +122,7 @@
                 if(Mins.segments[0].value==60){
                     Mins.segments[0].value = 0;
                     Mins.segments[1].value = 60;
-                    Hours.segments[hours].fillColor = '#f1f1f1';
+                    Hours.segments[hours].fillColor = '#F1A325';
                     hours+=1;
                     Hours.segments[hours].fillColor = '#EA644A';
                     Hours.update();
