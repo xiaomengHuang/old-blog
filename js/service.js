@@ -6,6 +6,7 @@
     var app = angular.module('myApp', []);
     app.controller('myCtrl', function($scope) {
         $scope.article = [];
+        $scope.clock_num = '';
         var git = new Github({username:"526371075@qq.com",password:"q2670187",auth:"basic"});
         var repo = git.getRepo("noobfan-kevin","noobfan-kevin.github.io");
         var options = {
@@ -107,8 +108,8 @@
         var seconds = _date.getSeconds(); //获取当前秒数(0-59)
         console.log(Hours.segments);
         Hours.segments[hours].fillColor = '#EA644A';
-        Mins.segments[0].value = minutes+1;
-        Mins.segments[1].value = 60-minutes-1;
+        Mins.segments[0].value = minutes;
+        Mins.segments[1].value = 60-minutes;
         Hours.update();
         Mins.update();
         $('.seconds').css({"height":4*seconds});
@@ -128,7 +129,11 @@
 
                 }
                 Mins.update();
+
             }
-        },500);
+            $('#clock-num').html((hours>10?hours:'0'+hours)+
+            ':'+(Mins.segments[0].value>10?Mins.segments[0].value:'0'+Mins.segments[0].value)+
+            ':'+(new_sec>10?new_sec:'0'+new_sec));
+        },1000);
     });
 }();

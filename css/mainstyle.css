@@ -33,7 +33,7 @@ article canvas{
     height: 100%;
     width: 100%;
 }
-.list2_right article{margin-left: 40px;padding-top: 10px;}
+.list2_right article{margin-left: 40px;padding-top: 10px;position: relative;}
 .list2 .index_authorInfo {color: rgba(0,0,0,0.5);font-size: 18px;text-align: center;
 margin-bottom: 10px;}
 .list2 .index_authorInfo span a{text-decoration: none;color: #ea644a;margin-left: 10px;}
@@ -58,15 +58,15 @@ footer{ height: 140px;width: 100%;background: rgba(0,0,0,0.7);}
 /*addblog*/
 #add_blog{margin: 0;padding: 0;}
 
-
 #myChartTwo{
     position: absolute;
-    left:71px;
+    left: 30px;
+    top: 10px;
 }
 .second-div{
     position: absolute;
     right: 10px;
-    top: 50px;
+    top: 2px;
     height: 240px;
     width: 10px;
     background: #f1f1f1;
@@ -78,6 +78,15 @@ footer{ height: 140px;width: 100%;background: rgba(0,0,0,0.7);}
     height: 4px;
     width: 4px;
     right: 3px;
+}
+.clock-num{
+    position: absolute;
+    bottom: 4px;
+    left: 4px;
+}
+.clock-num span{
+    font-size: 16px;
+    font-weight: bolder;
 }
 /*--------------keyframes---------------------*/
 
