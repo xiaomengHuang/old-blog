@@ -3,6 +3,18 @@ body{margin: 0;padding: 0;}
     visibility: hidden;
 }
 .row div{margin: 0;padding: 0;}
+.nav-list li:hover{
+    animation: colorChange 2.5s linear infinite alternate;
+    -webkit-animation:colorChange  2.5s linear infinite alternate;
+}
+@keyframes colorChange {
+    form{
+        background: #ddd;
+    }
+    to{
+        background: #ea644a;
+    }
+}
 #nav_link{font-size: 20px;font-family: "微软雅黑", "黑体", sans-serif ;}
 #nav_link ul{width: 80%;}
 #nav_link ul li {margin-left: 2%;}
@@ -89,9 +101,23 @@ footer{ height: 140px;width: 100%;background: rgba(0,0,0,0.7);}
     font-weight: bolder;
 }
 /*--------------keyframes---------------------*/
+footer div{
+    height: 100%;
 
-
-
-
+}
+.footer-middle{
+    text-align: center;
+}
+.footer-middle ul li{
+    list-style: none;
+    text-align: left;
+    margin-left: 30%;
+}
+.footer-middle h3,.footer-middle ul li a{
+    color: white;
+}
+.footer-right h3,.footer-right span,.footer-right b{
+    color: white;
+}
 
 

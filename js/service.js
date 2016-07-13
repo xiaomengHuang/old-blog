@@ -106,7 +106,7 @@
         var hours = (_date.getHours()>12?_date.getHours()-12:_date.getHours()); //获取当前小时数(0-23)
         var minutes = _date.getMinutes(); //获取当前分钟数(0-59)
         var seconds = _date.getSeconds(); //获取当前秒数(0-59)
-        console.log(Hours.segments);
+        //console.log(Hours.segments);
         Hours.segments[hours].fillColor = '#EA644A';
         Mins.segments[0].value = minutes;
         Mins.segments[1].value = 60-minutes;
@@ -131,9 +131,9 @@
                 Mins.update();
 
             }
-            $('#clock-num').html((hours>10?hours:'0'+hours)+
-            ':'+(Mins.segments[0].value>10?Mins.segments[0].value:'0'+Mins.segments[0].value)+
-            ':'+(new_sec>10?new_sec:'0'+new_sec));
+            $('#clock-num').html((hours>9?hours:'0'+hours)+
+            ':'+(Mins.segments[0].value>9?Mins.segments[0].value:'0'+Mins.segments[0].value)+
+            ':'+(new_sec>9?new_sec:'0'+new_sec));
         },1000);
     });
 }();

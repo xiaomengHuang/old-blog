@@ -2,8 +2,13 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
+    <title>黄晓萌的个人博客---向风口前进的童鞋</title>
+    <meta name="keywords" content="黄晓萌，个人博客，前端个人博客，技术分享，影评，黄晓萌的博客">
+    <meta name="description" content="黄晓萌，个人生活博客和技术分享博客，记录个人的点滴事件。">
     <link href="css/mainstyle.css" rel="stylesheet" />
     <link href="css/bootstrap.css" rel="stylesheet"/>
+    <link rel="shortcut icon" href="./lib/img/icon.ico" />
+    <link rel="bookmark" href="./lib/img/icon.ico"/>
     <script src="js/jquery-1.10.2.min.js" ></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/github.js"></script>
@@ -11,7 +16,7 @@
     <script src="lib/Chart.js"></script>
     <script src="js/service.js"></script>
 
-    <title>黄晓萌的个人博客</title>
+
 </head>
 <body ng-app="myApp" ng-controller="myCtrl">
 <nav class="navbar navbar-default" id="nav_head">
@@ -20,10 +25,10 @@
             <div class="navbar-header">
                 <a class="navbar-brand" href="">黄晓萌的文艺梦</a>
             </div>
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">主页 <span class="sr-only">(current)</span></a></li>
+            <ul class="nav navbar-nav nav-list">
+                <li class="active"><a href="index.html">主页 <span class="sr-only">(current)</span></a></li>
                 <li><a href="#">生活博客</a></li>
-                <li><a href="#">技术积累</a></li>
+                <li><a href="tec.html">技术积累</a></li>
                 <li><a href="#">影评</a></li>
             </ul>
         </div>
@@ -90,7 +95,7 @@
                     <h2>关于小介</h2>
                     <hr/>
                     <p>
-                        关于本人：本人是小技术宅，程序猿，但不是单身狗，这个博客就我我和女朋友一起弄得，她也是程序猿。（谁说程序猿没女朋友哈哈哈！）
+                        关于本人：本人是小技术宅，程序猿，但不是单身狗，这个博客就我我和女朋友一起弄得，她也是程序媛。（谁说程序猿没女朋友哈哈哈！）
                     </p>
                     <p>
                         关于本站：本站是一个半静态网站，使用github作为后台，主要数据都存放在github服务器上，该技术非常适合个人博客（个人观点）。我觉的也不是大型网站没必要弄个后台，github完全够用。
@@ -120,7 +125,30 @@
     </script>
 </div>
 <footer>
-
+    <div class="col-md-2 col-lg-2 footer-left">
+    </div>
+    <div class="col-md-4 col-lg-4 footer-middle">
+        <div class="col-md-6 col-lg-6">
+            <h3>友情链接：</h3>
+            <ul>
+                <li><a href="http://www.noobfan.com">NoobFan</a></li>
+                <li><a href="http://www.huangxiaomeng.top">黄晓萌的文艺梦</a></li>
+            </ul>
+        </div>
+        <div class="col-md-6 col-lg-6">
+            <h3>技术连接：</h3>
+            <ul>
+                <li><a href="http://v3.bootcss.com/">BootStrap</a></li>
+                <li><a href="http://www.bootcss.com/p/chart.js/">Chart.js</a></li>
+                <li><a href="http://www.angularjs.cn/">AngularJs中文社区</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-4 col-lg-4 footer-right">
+        <h3>声明：</h3>
+        <span>本站所涉及技术分享及教程为免费分享，不站不对其正确性做保证，如有使用请自行负责。</span>
+        <b>本站保留所有权利</b>
+    </div>
 </footer>
 </body>
 </html>
