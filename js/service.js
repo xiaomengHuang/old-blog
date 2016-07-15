@@ -9,8 +9,42 @@
             $scope.ulClick = function(num){
                 $scope.nav_active = num;
             }
-    }])
+    }])/*.config(function($provide){
+            $provide.provider('RepoService', function() {
+                this.$get = function() {
+                    return {
+                        getInfo : function(fileName){
+                            var git = new Github({username:"526371075@qq.com",password:"q2670187",auth:"basic"});
+                            var repo = git.getRepo("noobfan-kevin","noobfan-kevin.github.io");
+                            repo.read('master', 'dataFile/'+fileName, function(err, data) {
+                                return JSON.parse(data);
+                            });
+                        }
+                    }
+                };
+            });
+
+        })*/
+            .factory('RepoService',function(){
+                return {
+                    getInfo : function(fileName){
+                        var git = new Github({username:"526371075@qq.com",password:"q2670187",auth:"basic"});
+                        var repo = git.getRepo("noobfan-kevin","noobfan-kevin.github.io");
+                        repo.read('master', 'dataFile/'+fileName, function(err, data) {
+                            return JSON.parse(data);
+                        });
+                    }
+                }
+        })
+           /* .service('myAppService',function(repoService){
+               return {
+                   square : function(fileName){
+                    return repoService.getInfo(fileName);
+                   }
+               }
+            })*/
         .config(['$routeProvider', function($routeProvider){
+
         $routeProvider
             .when('/',{
                 templateUrl:'./templates/index-temp.html'})
@@ -32,7 +66,7 @@
                 replace: true
             };
         })
-        .controller('myIndexCtrl', [ '$scope', function($scope) {
+        .controller('myIndexCtrl', [ '$scope','RepoService', function($scope,RepoServiceProvider) {
         $scope.article = [];
         $scope.clock_num = '';
         var git = new Github({username:"526371075@qq.com",password:"q2670187",auth:"basic"});
@@ -116,6 +150,9 @@
                 resolve(__data__);
 
             });
+            //var info = RepoServiceProvider.getInfo('indexData.json');
+            //console.log(info);
+            //resolve(GetContext.getContext('indexData.json'));
         }).then(function(info){
             for(x in info){
                 var data = {};
@@ -156,11 +193,8 @@
                     Mins.segments[1].value = 60;
                     hours>=12? hours = 0:hours;
                     Hours.segments[hours].fillColor = '#F1A325';
-                    console.log(hours,'1111');
                     hours+=1;
-                    console.log(hours,'2222');
                     hours>=12? hours = 0:hours;
-                    console.log(hours,'3333');
                     Hours.segments[hours].fillColor = '#EA644A';
                     Hours.update();
 
