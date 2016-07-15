@@ -3,58 +3,54 @@
  */
 !function(){
 
-        angular.module('myApp', ['ngRoute'])
-        .controller('myCtrl', [ '$scope', function($scope) {
+    var app = angular.module('myApp', ['ngRoute']);
+    app.controller('myCtrl', [ '$scope', function($scope) {
             $scope.nav_active = 0;
             $scope.ulClick = function(num){
                 $scope.nav_active = num;
             }
-    }])/*.config(function($provide){
-            $provide.provider('RepoService', function() {
-                this.$get = function() {
-                    return {
-                        getInfo : function(fileName){
-                            var git = new Github({username:"526371075@qq.com",password:"q2670187",auth:"basic"});
-                            var repo = git.getRepo("noobfan-kevin","noobfan-kevin.github.io");
-                            repo.read('master', 'dataFile/'+fileName, function(err, data) {
-                                return JSON.parse(data);
-                            });
-                        }
-                    }
-                };
-            });
+    }]);
 
-        })*/
-            .factory('RepoService',function(){
-                return {
-                    getInfo : function(fileName){
-                        var git = new Github({username:"526371075@qq.com",password:"q2670187",auth:"basic"});
-                        var repo = git.getRepo("noobfan-kevin","noobfan-kevin.github.io");
-                        repo.read('master', 'dataFile/'+fileName, function(err, data) {
-                            return JSON.parse(data);
-                        });
-                    }
+    app.provider('Repo',function(){
+        this.loadRepo = function(){
+            console.log('fuck')
+        };
+        this.$get = function() {
+            return {
+                getInfo : function(fileName){
+                    var git = new Github({username:"526371075@qq.com",password:"q2670187",auth:"basic"});
+                    var repo = git.getRepo("noobfan-kevin","noobfan-kevin.github.io");
+                    repo.read('master', 'dataFile/'+fileName, function(err, data) {
+                        return JSON.parse(data);
+                    });
                 }
-        })
-           /* .service('myAppService',function(repoService){
-               return {
-                   square : function(fileName){
-                    return repoService.getInfo(fileName);
-                   }
-               }
-            })*/
-        .config(['$routeProvider', function($routeProvider){
+            }
+        };
+    });
+    app.config(function(RepoProvider){
+        RepoProvider.loadRepo();
+        return RepoProvider.$get();
+        });
 
-        $routeProvider
-            .when('/',{
-                templateUrl:'./templates/index-temp.html'})
-            .when('/tec',{
-                templateUrl:'./templates/tec-temp.html'})
-            .when('/life',{
-                templateUrl:'./templates/life-temp.html'})
-            .otherwise({redirectTo:'/'});
-    }])
-            .directive("mynav", function() {
+    app.factory('a',function(){
+        return {
+            getInfo : function(fileName){
+                var git = new Github({username:"526371075@qq.com",password:"q2670187",auth:"basic"});
+                var repo = git.getRepo("noobfan-kevin","noobfan-kevin.github.io");
+                repo.read('master', 'dataFile/'+fileName, function(err, data) {
+                    return JSON.parse(data);
+                });
+            }
+        }
+    });
+
+    //app.service('service',function(service){
+    //    this.square = function(fileName){
+    //        return service.getInfo(fileName);
+    //    }
+    //});
+
+    app.directive("mynav", function() {
             return {
                 restrict: 'E',
                 template : '<ul class="nav navbar-nav nav-list">\
@@ -65,8 +61,9 @@
                     </ul>',
                 replace: true
             };
-        })
-        .controller('myIndexCtrl', [ '$scope','RepoService', function($scope,RepoServiceProvider) {
+        });
+
+    app.controller('myIndexCtrl', [ '$scope', function($scope,$RepoProvider) {
         $scope.article = [];
         $scope.clock_num = '';
         var git = new Github({username:"526371075@qq.com",password:"q2670187",auth:"basic"});
@@ -150,7 +147,8 @@
                 resolve(__data__);
 
             });
-            //var info = RepoServiceProvider.getInfo('indexData.json');
+            ////var test = CalcService.square(3);
+            //var info = $RepoProvider.getInfo('indexData.json');
             //console.log(info);
             //resolve(GetContext.getContext('indexData.json'));
         }).then(function(info){
@@ -171,7 +169,7 @@
         var hours = (_date.getHours()>12?_date.getHours()-12:_date.getHours()); //获取当前小时数(0-23)
         var minutes = _date.getMinutes(); //获取当前分钟数(0-59)
         var seconds = _date.getSeconds(); //获取当前秒数(0-59)
-        console.log(Hours.segments[hours],'fillcolor.sdasasd',hours);
+        //console.log(Hours.segments[hours],'fillcolor.sdasasd',hours);
         if(hours == 12){
             Hours.segments[0].fillColor = '#EA644A';
         }else{
@@ -206,12 +204,26 @@
                 ':'+(Mins.segments[0].value>9?Mins.segments[0].value:'0'+Mins.segments[0].value)+
                 ':'+(new_sec>9?new_sec:'0'+new_sec));
         },1000);
-    }])
-            .controller('myTecCtrl',['$scope', function($scope){
+    }]);
+
+    app.controller('myTecCtrl',['$scope', function($scope){
                 console.log('tec page');
-            }])
-            .controller('myLifeCtrl',['$scope', function($scope){
+            }]);
+
+    app.controller('myLifeCtrl',['$scope', function($scope){
             console.log('life page');
             }]);
+
+    app.config(['$routeProvider', function($routeProvider){
+
+        $routeProvider
+            .when('/',{
+                templateUrl:'./templates/index-temp.html'})
+            .when('/tec',{
+                templateUrl:'./templates/tec-temp.html'})
+            .when('/life',{
+                templateUrl:'./templates/life-temp.html'})
+            .otherwise({redirectTo:'/'});
+    }]);
 
 }();
