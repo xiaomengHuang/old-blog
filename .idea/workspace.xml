@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7acd8ae5-d022-406f-b6e7-e16d2a858eea" name="默认的" comment="封装方法">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/angular-route.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/angular-ui-router.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/index-temp.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/life-temp.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/tec-temp.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/testa.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/tecService.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/service.js" afterPath="$PROJECT_DIR$/js/service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/angular.js" afterPath="$PROJECT_DIR$/lib/angular.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tec.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/testa.html" afterPath="" />
     </list>
     <ignored path="noobfan.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,21 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="testa.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/testa.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="26" column="16" selection-start-line="20" selection-start-column="12" selection-end-line="26" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.7077998">
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -87,18 +68,18 @@
       <file leaf-file-name="tec-temp.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/tec-temp.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-0.0">
               <caret line="0" column="12" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="life-temp.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="life-temp.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/life-temp.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.1862631">
-              <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
+            <state vertical-scroll-proportion="-5.3333335">
+              <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -109,8 +90,8 @@
       <file leaf-file-name="index-temp.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/index-temp.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="36" />
+            <state vertical-scroll-proportion="-1.7777778">
+              <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -118,11 +99,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tec.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tec.html">
+      <file leaf-file-name="test.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="35" column="6" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
+            <state vertical-scroll-proportion="-0.8888889">
+              <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -635,13 +616,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.8888889">
-          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.111111">
@@ -706,18 +680,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tec.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="6" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/angular-route.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3329609">
           <caret line="708" column="24" selection-start-line="708" selection-start-column="24" selection-end-line="708" selection-end-column="24" />
+          <folding>
+            <marker date="1443506974000" expanded="true" signature="11434:12181" placeholder="..." />
+            <marker date="1443506974000" expanded="true" signature="12721:12874" placeholder="{...}" />
+            <marker date="1443506974000" expanded="true" signature="12956:13065" placeholder="{...}" />
+            <marker date="1443506974000" expanded="true" signature="13150:13262" placeholder="{...}" />
+            <marker date="1443506974000" expanded="true" signature="13334:14092" placeholder="{...}" />
+            <marker date="1443506974000" expanded="true" signature="13513:13783" placeholder="{...}" />
+            <marker date="1443506974000" expanded="true" signature="13612:13766" placeholder="{...}" />
+            <marker date="1443506974000" expanded="true" signature="14250:14837" placeholder="{...}" />
+            <marker date="1443506974000" expanded="true" signature="27903:28617" placeholder="..." />
+            <marker date="1443506974000" expanded="true" signature="28228:28298" placeholder="..." />
+            <marker date="1443506974000" expanded="true" signature="28676:28781" placeholder="..." />
+            <marker date="1443506974000" expanded="true" signature="28843:29005" placeholder="..." />
+            <marker date="1443506974000" expanded="true" signature="29089:29275" placeholder="{...}" />
+            <marker date="1443506974000" expanded="true" signature="29299:29334" placeholder="{...}" />
+            <marker date="1443506974000" expanded="true" signature="29391:29689" placeholder="{...}" />
+            <marker date="1443506974000" expanded="true" signature="29722:29754" placeholder="{...}" />
+            <marker date="1443506974000" expanded="true" signature="29802:29831" placeholder="{...}" />
+            <marker date="1443506974000" expanded="true" signature="29879:29912" placeholder="{...}" />
+            <marker date="1443506974000" expanded="true" signature="30042:30625" placeholder="[...]" />
+            <marker date="1443506974000" expanded="true" signature="30138:30624" placeholder="{...}" />
+            <marker date="1443506974000" expanded="true" signature="30208:30352" placeholder="{&quot;templateUrl&quot;: 'book.html'...}" />
+            <marker date="1443506974000" expanded="true" signature="30407:30560" placeholder="{&quot;templateUrl&quot;: 'chapter.html'...}" />
+            <marker date="1443506974000" expanded="true" signature="30661:30895" placeholder="[...]" />
+            <marker date="1443506974000" expanded="true" signature="30755:30894" placeholder="{...}" />
+            <marker date="1443506974000" expanded="true" signature="30931:31061" placeholder="[...]" />
+            <marker date="1443506974000" expanded="true" signature="30971:31060" placeholder="{...}" />
+            <marker date="1443506974000" expanded="true" signature="31100:31233" placeholder="[...]" />
+            <marker date="1443506974000" expanded="true" signature="31140:31232" placeholder="{...}" />
+            <marker date="1443506974000" expanded="true" signature="31370:31903" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -725,14 +722,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testa.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="16" selection-start-line="20" selection-start-column="12" selection-end-line="26" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -744,37 +733,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/mainstyle.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/tec-temp.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="12" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index-temp.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="36" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -797,13 +760,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/tec-temp.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="12" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/life-temp.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1862631">
-          <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
+        <state vertical-scroll-proportion="-5.3333335">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index-temp.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.7777778">
+          <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.8888889">
+          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7077998">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
