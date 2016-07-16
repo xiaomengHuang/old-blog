@@ -12,41 +12,22 @@
     }]);
 
     app.provider('Repo',function(){
-        this.loadRepo = function(){
-            console.log('fuck')
-        };
         this.$get = function() {
             return {
-                getInfo : function(fileName){
+                getRepoObj : function(){
                     var git = new Github({username:"526371075@qq.com",password:"q2670187",auth:"basic"});
-                    var repo = git.getRepo("noobfan-kevin","noobfan-kevin.github.io");
-                    repo.read('master', 'dataFile/'+fileName, function(err, data) {
-                        return JSON.parse(data);
-                    });
+                    return git.getRepo("noobfan-kevin","noobfan-kevin.github.io");
                 }
             }
         };
     });
-    app.config(function(RepoProvider){
-        RepoProvider.loadRepo();
-        return RepoProvider.$get();
-        });
 
-    app.factory('a',function(){
-        return {
-            getInfo : function(fileName){
-                var git = new Github({username:"526371075@qq.com",password:"q2670187",auth:"basic"});
-                var repo = git.getRepo("noobfan-kevin","noobfan-kevin.github.io");
-                repo.read('master', 'dataFile/'+fileName, function(err, data) {
-                    return JSON.parse(data);
-                });
-            }
-        }
-    });
-
-    //app.service('service',function(service){
-    //    this.square = function(fileName){
-    //        return service.getInfo(fileName);
+    //app.factory('a',function(){
+    //    return {
+    //        getInfo : function(fileName){
+    //            var git = new Github({username:"526371075@qq.com",password:"q2670187",auth:"basic"});
+    //            var repo = git.getRepo("noobfan-kevin","noobfan-kevin.github.io");
+    //        }
     //    }
     //});
 
@@ -63,16 +44,14 @@
             };
         });
 
-    app.controller('myIndexCtrl', [ '$scope', function($scope,$RepoProvider) {
+    app.controller('myIndexCtrl', [ '$scope','Repo', function($scope,Repo) {
         $scope.article = [];
         $scope.clock_num = '';
-        var git = new Github({username:"526371075@qq.com",password:"q2670187",auth:"basic"});
-        var repo = git.getRepo("noobfan-kevin","noobfan-kevin.github.io");
-        var options = {
-            author: {name: 'kevin', email: 'author@example.com'},
-            committer: {name: 'kevin', email: 'committer@example.com'},
-            encode: true // Whether to base64 encode the file. (default: true)
-        };
+        //var options = {
+        //    author: {name: 'kevin', email: 'author@example.com'},
+        //    committer: {name: 'kevin', email: 'committer@example.com'},
+        //    encode: true // Whether to base64 encode the file. (default: true)
+        //};
         var _data = [
             {
                 value: 10,
@@ -142,15 +121,11 @@
         var two = document.getElementById("myChartTwo").getContext("2d");
         var Mins = new Chart(two).Doughnut(_data_,_option);
         new Promise(function(resolve,reject){
-            repo.read('master', 'dataFile/indexData.json', function(err, data) {
+            Repo.getRepoObj().read('master', 'dataFile/indexData.json', function(err, data) {
                 var __data__ = JSON.parse(data);
                 resolve(__data__);
 
             });
-            ////var test = CalcService.square(3);
-            //var info = $RepoProvider.getInfo('indexData.json');
-            //console.log(info);
-            //resolve(GetContext.getContext('indexData.json'));
         }).then(function(info){
             for(x in info){
                 var data = {};
