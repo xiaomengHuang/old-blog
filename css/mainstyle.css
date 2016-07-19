@@ -120,4 +120,27 @@ footer div{
     color: white;
 }
 
-
+/*================================tec页面==============================================*/
+.tec-contain{
+    background: #f1f1f1;
+}
+.tec-pis{
+    margin-top: 20px!important;
+    background: white;
+    height:200px;
+    width: 100%;
+    border: 1px solid #999;
+    padding: 10px!important;
+}
+.tec-pic{
+    height: 178px;
+    overflow: hidden;
+}
+.tec-pics{
+    height: 178px;
+    width: 100%;
+}
+.tec-pics:hover{
+    height: 190px;
+    width: 104%;
+}
