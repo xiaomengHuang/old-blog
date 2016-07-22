@@ -183,7 +183,12 @@
 
     app.controller('myTecCtrl',['$scope', function($scope){
                 console.log('tec page');
-            }]);
+        var setting = {
+            time:4000,
+            ulClass:'HXM-tec-lunBo-ul'
+        };
+        $('.HXM-tec-lunBo').Carousel(setting);
+    }]);
 
     app.controller('myLifeCtrl',['$scope', function($scope){
             console.log('life page');

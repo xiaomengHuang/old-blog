@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>focus code powered by boyxing.com</title>
+    <script type="text/javascript" src="../js/jquery-1.10.2.min.js"></script><!--引用Jquery框架-->
+    <script type="text/javascript" src="../js/Carousel.js"></script>
+    <!--css定义，可以根据需要自己定义-->
+    <style type="text/css">
+        body,ul,li{ margin:0; padding:0}
+        ul,li{ list-style:none;}
+        .focus{ margin:0 auto; height:320px; width:980px; overflow:hidden; position:relative; padding:0;}
+        .focus .bigpic{ position:absolute;padding:0;}
+        .focus .bigpic li{ width:980px;float:left;padding:0;}
+        .focus .btn{ overflow:hidden; height:30px;position:absolute; bottom:3px; left:50%; margin-left:-100px;}
+        .focus .btn li{ float:left; margin:0 10px; padding:5px; cursor:pointer; background: #fff;border:1px #900 solid;border-radius:12px; height:12px; width:12px; overflow:hidden; text-align:center; line-height:12px;opacity:0.6; float:left;}
+        .focus .btn li.on{ background: #990000; color:#FFFFFF;}
+    </style>
+</head>
+<body>
+
+<!--焦点图div部分开始-->
+<div class="focus">
+    <div class="focuscon">
+        <ul class="bigpic">
+            <li><a href=""><img src="../lib/img/12.jpg" border="0"></a></li>
+            <li><a href=""><img src="../lib/img/gal.jpg" border="0"></a></li>
+            <li><a href=""><img src="../lib/img/logo.png" border="0"></a></li>
+            <li><a href=""><img src="../lib/img/pic1.png" border="0"></a></li><!--焦点图个数不限-->
+        </ul>
+    </div>
+</div>
+<!--焦点图div部分结束-->
+
+</body>
+<script type="text/javascript">
+    $(document).ready(function(){
+        var setting = {
+            time:4000,
+            ulClass:'bigpic'
+        };
+        $('.focus').Carousel(setting);
+
+//        var num=$(".bigpic li").length;//获取焦点图的个数
+//        var fwidth=$(".bigpic li").width();//获取每个焦点图的宽度
+//        var sec=4000;//时间切换间隔
+//
+//        var btn = '<ul class="btn"><li class="on">1</li>';
+//        var btnend = '</ul>';
+//        for(i=2;i<=num;i++){btn += '<li>'+i+'</li>';};
+//        btn += btnend;
+//        if(num == 1){btn = null};
+//        $(".focus").append(btn);//自动根据焦点图个数，添加切换按钮，如果只有一张图片则不显示切换按钮。
+//
+//        $(".bigpic").css("width",fwidth*num);//设定大图集合的宽度，也就是所有焦点图宽度的和。
+//
+//        $(".btn li").bind("mouseover",function(){
+//            $(this).addClass("on").siblings().removeClass("on");
+//            var i=$(".btn li").index(this);var marginL=fwidth*i;
+//            $(".bigpic").animate({"left":-marginL},500);}
+//        );//鼠标指向按钮，焦点图切换到对应位置，按钮样式改变。mouseover是鼠标经过时，这里也可以改成click，通过点击切换焦点图。
+//
+//        picTimer = setInterval(timeset,sec); //指定sec毫秒后执行一次timeset函数。
+//        function timeset(){
+//            var j = $(".btn li").index($(".on"));//取得 当前焦点图的位置，即class为on的序号。
+//            var timew = fwidth*(j+1);
+//            if(j == num-1){$(".btn li").eq(0).addClass("on").siblings().removeClass("on");$(".bigpic").animate({"left":0},500);}
+//            else{$(".btn li").eq(j+1).addClass("on").siblings().removeClass("on");$(".bigpic").animate({"left":-timew},500);};
+//        };
+//
+//        $(".focus").mouseover(function(){clearInterval(picTimer);});
+//        $(".focus").bind("mouseout",function(){picTimer = setInterval(timeset,sec);}
+//        );//当鼠标指向焦点图或者是切换按钮时，定时器清除，即不在执行自动切换，鼠标离开则恢复自动切换。
+
+    })
+</script>
+</html>

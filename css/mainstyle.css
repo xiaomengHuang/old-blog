@@ -1,8 +1,7 @@
-body{margin: 0;padding: 0;}
+body,div,ul,li,.container-fluid,.row{margin: 0;padding: 0;}
 .zhanwei{
     visibility: hidden;
 }
-.row div{margin: 0;padding: 0;}
 .nav-list li:hover{
     animation: colorChange 2.5s linear infinite alternate;
     -webkit-animation:colorChange  2.5s linear infinite alternate;
@@ -121,6 +120,34 @@ footer div{
 }
 
 /*================================tec页面==============================================*/
+.HXM-tec-lunBo{
+    height:400px;
+    background: #f1f1f1;
+    overflow: hidden;
+
+}
+.HXM-tec-lunBo-ul{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+.HXM-tec-lunBo-ul li{
+    list-style: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    float: left;
+}
+.li-active{
+    display: block!important;
+}
+.HXM-tec-lunBo-ul img{
+    height:400px;
+    width: 100%
+}
 .tec-contain{
     background: #f1f1f1;
 }
@@ -133,6 +160,8 @@ footer div{
     padding: 10px!important;
 }
 .tec-pic{
+    padding: 0;
+    margin: 0;
     height: 178px;
     overflow: hidden;
 }
@@ -140,7 +169,11 @@ footer div{
     height: 178px;
     width: 100%;
 }
-.tec-pics:hover{
-    height: 190px;
-    width: 104%;
+.li-text-are{
+    position: absolute;
+    top: 40%;
+    left:100px;
+}
+.li-text-are h1,.li-text-are h3{
+    color: white;
 }
