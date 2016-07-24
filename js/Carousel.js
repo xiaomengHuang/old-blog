@@ -8,21 +8,21 @@
         } else if (typeof method === 'object' || !method) {
             return methods.init.apply(this, arguments);
         } else {
-            $.error('Method ' + method + ' does not exist on jQuery.pluginName');
+            $.error('方法： ' + method + '不存在！');
         }
     };
     var methods = {
         init : function (_options) {
             return this.each(function () {
                 var $this = $(this);
-                console.log($this);
                 var args = $.extend({}, $.fn.Carousel.defaults, _options);
                 var ulClass = args.ulClass;
-                var num=$('.'+ulClass+' li').length;//获取焦点图的个数
+                var num=$('.'+ulClass+' li').length;
                 private_methods.initLiIndex(ulClass,num);
                 private_methods.appendBtn($this,num);
-                private_methods.btnBindEvent();
-                var sec=args.time;//时间切换间隔
+                private_methods.appendStyle($this);
+                private_methods.btnBindEvent(ulClass,num,$this);
+                var sec=args.time;
                 var picTimer = private_methods.getTimePicker(ulClass,num,sec);
                 $this.mouseover(
                     function(){
@@ -45,6 +45,17 @@
         demoMethod : function(){
             console.log('private function');
         },
+        appendStyle:function($this){
+            var style = '<style>\
+            body,ul,li{ margin:0; padding:0}\
+            ul,li{ list-style:none;}\
+            .HXM-tec-lunBo-ul{ position:absolute;padding:0;}\
+            .carouselBtn{ overflow:hidden; height:30px;position:absolute; bottom:3px; left:50%; margin-left:-100px;}\
+            .carouselBtn li{ float:left; margin:0 10px; padding:5px; cursor:pointer; background: #ea644a;border:1px #ea644a solid;border-radius:12px; height:22px; width:22px; overflow:hidden; text-align:center; line-height:10px;opacity:0.6; float:left;}\
+            .carouselBtn li.on{ background: #ea644a; color:white;}\
+            </style>';
+            $this.append(style);
+        },
         getTimePicker:function(ulClass,num,sec){
            return setInterval(function(){
                private_methods.animateFunc(ulClass,num);
@@ -57,8 +68,8 @@
         },
         animateFunc:function(ulClass,num){
             var $ulLi = $('.'+ulClass+' li');
-            var $btnLi = $(".btn li");
-            var position = $btnLi.index($(".on"));//取得 当前焦点图的位置，即class为on的序号。
+            var $btnLi = $(".carouselBtn li");
+            var position = $(".on").index();
             if(position === num-1){
                 $btnLi.eq(0).addClass("on").siblings().removeClass("on");
             } else{
@@ -73,7 +84,7 @@
             },1000);
         },
         appendBtn : function($this,num){
-            var btn = '<ul class="btn"><li class="on">1</li>';
+            var btn = '<ul class="carouselBtn"><li class="on">1</li>';
             var end = '</ul>';
             for(var i=2;i<=num;i++){
                 btn += '<li>'+i+'</li>';
@@ -82,23 +93,42 @@
             if(num == 1){
                 btn = null
             }
-            $this.append(btn);//自动根据焦点图个数，添加切换按钮，如果只有一张图片则不显示切换按钮。
-            $('.btn').css({'z-index':parseInt(num)+1});
+            $this.append(btn);
+            $('.carouselBtn').css({'z-index':parseInt(num)+2});
         },
-        btnBindEvent :function(){
-            $(".btn li").bind("click",function(){
-                //$(this).addClass("on").siblings().removeClass("on");
-                var len =$(".btn li").length;
+        btnBindEvent :function(ulClass,num,$this){
+            $(".carouselBtn li").bind("click",function(){
+                var $ulLi = $('.'+ulClass+' li');
+                //console.log($ulLi);
+                //    $ulLi[0].addEventListener("webkitAnimationEnd", function(e){ //动画结束时事件
+                //        console.log('dasdasd',e);
+                //    }, false);
+                //    $ulLi[0].addEventListener("animationend", function(e){ //动画结束时事件
+                //        console.log('dasdasd',e);
+                //    }, false);
                 var index = $(this).index();
                 var index2 = $(".on").index();
-                console.log(index,index2,len);
-
-
-            }
-            );//鼠标指向按钮，焦点图切换到对应位置，按钮样式改变。mouseover是鼠标经过时，这里也可以改成click，通过点击切换焦点图。
+                var z_index = 0;
+                $ulLi.eq(index2).css({"z-index":parseInt(num)+1,"opacity":1}).animate({"opacity":0},1000);
+                $ulLi.eq(index).css({"z-index":num,"opacity":1});
+                $(this).addClass("on").siblings().removeClass("on");
+                setTimeout(function(){
+                    for(var i=0;i<num;i++){
+                        if(i<index){
+                            z_index = index-i;
+                        }else if(i===index){
+                            z_index = num;
+                        }else{
+                            z_index = num-i+index;
+                        }
+                        $ulLi.eq(i).css({"z-index":z_index,"opacity":1});
+                    }
+                },1000);
+            });
         }
     };
     // 默认参数
     $.fn.Carousel.defaults = {
+        time:4000
     };
 })(jQuery);

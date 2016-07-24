@@ -120,25 +120,39 @@
         var Hours = new Chart(one).Pie(_data,{});
         var two = document.getElementById("myChartTwo").getContext("2d");
         var Mins = new Chart(two).Doughnut(_data_,_option);
-        new Promise(function(resolve,reject){
-            Repo.getRepoObj().read('master', 'dataFile/indexData.json', function(err, data) {
-                var __data__ = JSON.parse(data);
-                resolve(__data__);
-
-            });
-        }).then(function(info){
-            for(x in info){
-                var data = {};
-                data.title = info[x].artName;
-                data.editor = info[x].artUser;
-                data.detail = info[x].artDetail.split('##');
-                data.src = info[x].artSrc;
-                $scope.article.push(data);
+        Repo.getRepoObj().read('master', 'dataFile/indexData.json', function(err, data) {
+            var __data__ = JSON.parse(data);
+            for(x in __data__){
+                var _data = {};
+                _data.title = __data__[x].artName;
+                _data.editor = __data__[x].artUser;
+                _data.detail = __data__[x].artDetail.split('##');
+                _data.src = __data__[x].artSrc;
+                $scope.article.push(_data);
             }
             $scope.$apply($scope.article);
-        }).catch(function(err){
-            console.log(err);
+
         });
+        //TODO cause IE not support Promise，so ...IE is shit
+        //new Promise(function(resolve,reject){
+        //    Repo.getRepoObj().read('master', 'dataFile/indexData.json', function(err, data) {
+        //        var __data__ = JSON.parse(data);
+        //        resolve(__data__);
+        //
+        //    });
+        //}).then(function(info){
+        //    for(x in info){
+        //        var data = {};
+        //        data.title = info[x].artName;
+        //        data.editor = info[x].artUser;
+        //        data.detail = info[x].artDetail.split('##');
+        //        data.src = info[x].artSrc;
+        //        $scope.article.push(data);
+        //    }
+        //    $scope.$apply($scope.article);
+        //}).catch(function(err){
+        //    console.log(err);
+        //});
 
         var _date = new Date();
         var hours = (_date.getHours()>12?_date.getHours()-12:_date.getHours()); //获取当前小时数(0-23)
