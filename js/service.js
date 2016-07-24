@@ -5,9 +5,10 @@
 
     var app = angular.module('myApp', ['ngRoute']);
     app.controller('myCtrl', [ '$scope', function($scope) {
-            $scope.nav_active = 0;
+            $scope.nav_active = localStorage.getItem('nav_active')||0;
             $scope.ulClick = function(num){
                 $scope.nav_active = num;
+                localStorage.setItem('nav_active',num);
             }
     }]);
 
@@ -35,10 +36,11 @@
             return {
                 restrict: 'E',
                 template : '<ul class="nav navbar-nav nav-list">\
-                    <li ng-click="ulClick(0)" ng-class="{0:\'active\',1:\'\',2:\'\',3:\'\'}[nav_active]"><a href="#/">主页 <span class="sr-only">(current)</span></a></li>\
-                    <li ng-click="ulClick(1)" ng-class="{0:\'\',1:\'active\',2:\'\',3:\'\'}[nav_active]"><a href="#/life">生活博客</a></li>\
-                    <li ng-click="ulClick(2)" ng-class="{0:\'\',1:\'\',2:\'active\',3:\'\'}[nav_active]"><a href="#/tec">技术积累</a></li>\
-                    <li ng-click="ulClick(3)" ng-class="{0:\'\',1:\'\',2:\'\',3:\'active\'}[nav_active]"><a href="#/moves">影评</a></li>\
+                    <li ng-click="ulClick(0)" ng-class="{0:\'active\',1:\'\',2:\'\',3:\'\',4:\'\'}[nav_active]"><a href="#/">主页 <span class="sr-only">(current)</span></a></li>\
+                    <li ng-click="ulClick(1)" ng-class="{0:\'\',1:\'active\',2:\'\',3:\'\',4:\'\'}[nav_active]"><a href="#/life">生活小记</a></li>\
+                    <li ng-click="ulClick(2)" ng-class="{0:\'\',1:\'\',2:\'active\',3:\'\',4:\'\'}[nav_active]"><a href="#/tec">技术积累</a></li>\
+                    <li ng-click="ulClick(3)" ng-class="{0:\'\',1:\'\',2:\'\',3:\'active\',4:\'\'}[nav_active]"><a href="#/moves">影评</a></li>\
+                    <li ng-click="ulClick(4)" ng-class="{0:\'\',1:\'\',2:\'\',3:\'\',4:\'active\'}[nav_active]"><a href="#/blogTemp">博客模板</a></li>\
                     </ul>',
                 replace: true
             };
@@ -198,7 +200,7 @@
     app.controller('myTecCtrl',['$scope', function($scope){
                 console.log('tec page');
         var setting = {
-            time:4000,
+            time:5000,
             ulClass:'HXM-tec-lunBo-ul'
         };
         $('.HXM-tec-lunBo').Carousel(setting);

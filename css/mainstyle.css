@@ -158,6 +158,7 @@ footer div{
     width: 100%;
     border: 1px solid #999;
     padding: 10px!important;
+    position: relative;
 }
 .tec-pic{
     padding: 0;
@@ -173,7 +174,36 @@ footer div{
     position: absolute;
     top: 40%;
     left:100px;
+    background: rgba(255,255,255,0.6);
+    padding: 10px!important;
+    width: 480px;
+    border-radius: 30px;
+    transition:border-radius 1s;
+    -moz-transition:border-radius 1s; /* Firefox 4 */
+    -webkit-transition:border-radius 1s; /* Safari and Chrome */
+    -o-transition:border-radius 1s; /* Opera */
 }
-.li-text-are h1,.li-text-are h3{
+.li-text-are:hover{
+    border-radius: 0;
+    text-shadow: #fff 1px 1px 1px;
+}
+.li-text-are h2,.li-text-are h3{
+    color: #333;
+}
+.tec-text{
+    padding: 10px!important;
+    position: relative;
+}
+.tec-text span{
+    font-size: 14px;
+}
+.tec-btn{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+.tec-btn a{
+    background: #ea644a;
     color: white;
+    opacity: 0.8;
 }
