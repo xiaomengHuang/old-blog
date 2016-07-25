@@ -2,6 +2,7 @@
  * Created by hk60 on 2016/7/22.
  */
 !(function($){
+    var picTimer;
     $.fn.Carousel = function (method) {
         if (methods[method]) {
             return methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
@@ -23,7 +24,8 @@
                 private_methods.appendStyle($this);
                 private_methods.btnBindEvent(ulClass,num,$this);
                 var sec=args.time;
-                var picTimer = private_methods.getTimePicker(ulClass,num,sec);
+                clearInterval(picTimer);
+                picTimer = private_methods.getTimePicker(ulClass,num,sec);
                 $this.mouseover(
                     function(){
                         clearInterval(picTimer);
