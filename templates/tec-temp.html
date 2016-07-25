@@ -9,42 +9,16 @@
 <div class="container-fluid row" id="tec-inner" ng-controller="myTecCtrl">
     <div  class="col-md-12 col-lg-12 HXM-tec-lunBo">
         <ul class="HXM-tec-lunBo-ul">
-            <li>
+            <li ng-repeat="carousel in tec_Carousel">
                 <a>
-                    <img src="./lib/img/star.jpg" border="0">
+                    <img ng-src="{{carousel.src}}" border="0">
                 </a>
                 <div class="li-text-are">
-                    <h2>我们的目标是，星辰大海！</h2>
-                    <h3>但是别忘了，梦在远方。</h3>
+                    <h2>{{carousel.h2}}</h2>
+                    <h3>{{carousel.h3}}</h3>
                 </div>
             </li>
-            <li>
-                <a>
-                    <img src="./lib/img/height.jpg" border="0">
-                </a>
-                <div class="li-text-are">
-                    <h2>年少不轻狂，不要又何妨！</h2>
-                    <h3>不疯魔，不成活。</h3>
-                </div>
-            </li>
-            <li>
-                <a>
-                    <img src="./lib/img/roud.jpg" border="0">
-                </a>
-                <div class="li-text-are">
-                    <h2>技术的积累，决定成功的高度！</h2>
-                    <h3>技术的全面，决定了生涯的宽度。</h3>
-                </div>
-            </li>
-            <li>
-                <a>
-                    <img src="./lib/img/sharp.jpg" border="0">
-                </a>
-                <div class="li-text-are">
-                    <h2>技术的积累，决定成功的高度！</h2>
-                    <h3>技术的全面。</h3>
-                </div>
-            </li><!--焦点图个数不限-->
+            <!--焦点图个数不限-->
         </ul>
     </div>
     <div class="col-md-2 col-lg-2">111</div>

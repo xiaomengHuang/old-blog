@@ -197,13 +197,25 @@
         },1000);
     }]);
 
-    app.controller('myTecCtrl',['$scope', function($scope){
+    app.controller('myTecCtrl',['$scope','Repo', function($scope,Repo){
         $scope.tec_Carousel = [];
         var setting = {
             time:5000,
             ulClass:'HXM-tec-lunBo-ul'
         };
-        $('.HXM-tec-lunBo').Carousel(setting);
+        Repo.getRepoObj().read('master', 'dataFile/tec_carousel.json', function(err, data) {
+            $scope.tec_Carousel=[];
+            var __data__ = JSON.parse(data);
+            for(x in __data__){
+                var _data = {};
+                _data.h2 = __data__[x].h2;
+                _data.h3 = __data__[x].h3;
+                _data.src = __data__[x].artSrc;
+                $scope.tec_Carousel.push(_data);
+            }
+            $scope.$apply($scope.tec_Carousel);
+            $('.HXM-tec-lunBo').Carousel(setting);
+        });
     }]);
 
     app.controller('myLifeCtrl',['$scope', function($scope){
