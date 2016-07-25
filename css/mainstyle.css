@@ -169,6 +169,17 @@ footer div{
 .tec-pics{
     height: 178px;
     width: 100%;
+    margin: auto;
+    transition:all 1s;
+    -moz-transition:all 1s; /* Firefox 4 */
+    -webkit-transition:all 1s; /* Safari and Chrome */
+    -o-transition:all 1s; /* Opera */
+}
+.tec-pics:hover{
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
 }
 .li-text-are{
     position: absolute;
@@ -206,4 +217,36 @@ footer div{
     background: #ea644a;
     color: white;
     opacity: 0.8;
+}
+.tec-right{padding: 20px!important;}
+.tec-tags{
+    border: 1px solid #888;
+    padding: 20px!important;
+}
+.tec-tags ul li{
+    list-style: none;
+    line-height: 26px;
+    padding: 0 10px;
+    margin-bottom:6px;
+    width: 70%;
+    transition:width 1s;
+    -moz-transition:width 1s; /* Firefox 4 */
+    -webkit-transition:width 1s; /* Safari and Chrome */
+    -o-transition:width 1s; /* Opera */
+}
+.tec-tags ul li:hover{
+    width: 100%;
+}
+.tec-tags ul li a{
+    color: white;
+    text-decoration: none;
+}
+.tec-contain-title{
+    height: 40px;
+    background: white;
+    padding-left: 10px;
+    border-bottom: 3px solid #ea644a;
+}
+.tec-contain-title span{
+    line-height: 40px;
 }

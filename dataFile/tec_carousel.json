@@ -2,25 +2,25 @@
   "1":
   {
     "h2":"据说有科技宅用编程创造了星空",
-    "artSrc":"lib/img/star.jpg",
+    "artSrc":"lib/img/tec/star.jpg",
     "h3":"直击python的高端应用"
   },
   "2":
   {
-    "h2":"google的无人驾驶汽车已经行驶上万历程",
-    "artSrc":"lib/img/roud.jpg",
+    "h2":"google的无人驾驶汽车已经行驶上万里程",
+    "artSrc":"lib/img/tec/roud.jpg",
     "h3":"我们的百度还在送外卖"
   },
   "3":
   {
     "h2":"3D打印到底是不是一项黑科技",
-    "artSrc":"lib/img/sharp.jpg",
+    "artSrc":"lib/img/tec/sharp.jpg",
     "h3":"大神使用3D打印生产主板"
   },
   "4":
   {
     "h2":"NASA的哈勃发现了宇宙的尽头",
-    "artSrc":"lib/img/12.jpg",
+    "artSrc":"lib/img/tec/12.jpg",
     "h3":"宇宙的秘密能否解开"
   }
 

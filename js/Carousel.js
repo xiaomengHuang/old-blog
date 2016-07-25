@@ -31,9 +31,6 @@
                 $this.bind("mouseout",function(){
                     picTimer = private_methods.getTimePicker(ulClass,num,sec);
                 });
-
-
-                console.log(args);
             })
         },
         publicMethod : function(){
