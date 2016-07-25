@@ -108,22 +108,24 @@
                 //    }, false);
                 var index = $(this).index();
                 var index2 = $(".on").index();
-                var z_index = 0;
-                $ulLi.eq(index2).css({"z-index":parseInt(num)+1,"opacity":1}).animate({"opacity":0},1000);
-                $ulLi.eq(index).css({"z-index":num,"opacity":1});
-                $(this).addClass("on").siblings().removeClass("on");
-                setTimeout(function(){
-                    for(var i=0;i<num;i++){
-                        if(i<index){
-                            z_index = index-i;
-                        }else if(i===index){
-                            z_index = num;
-                        }else{
-                            z_index = num-i+index;
+                if(index!==index2){
+                    var z_index = 0;
+                    $ulLi.eq(index2).css({"z-index":parseInt(num)+1,"opacity":1}).animate({"opacity":0},1000);
+                    $ulLi.eq(index).css({"z-index":num,"opacity":1});
+                    $(this).addClass("on").siblings().removeClass("on");
+                    setTimeout(function(){
+                        for(var i=0;i<num;i++){
+                            if(i<index){
+                                z_index = index-i;
+                            }else if(i===index){
+                                z_index = num;
+                            }else{
+                                z_index = num-i+index;
+                            }
+                            $ulLi.eq(i).css({"z-index":z_index,"opacity":1});
                         }
-                        $ulLi.eq(i).css({"z-index":z_index,"opacity":1});
-                    }
-                },1000);
+                    },1000);
+                }
             });
         }
     };

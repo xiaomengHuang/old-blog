@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7acd8ae5-d022-406f-b6e7-e16d2a858eea" name="默认的" comment="封装方法">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/img/height.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/img/roud.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/img/sharp.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/img/star.jpg" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/img/pic1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/img/pic2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/img/pic3.jpg" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dataFile/tec_carousel.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/mainstyle.css" afterPath="$PROJECT_DIR$/css/mainstyle.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Carousel.js" afterPath="$PROJECT_DIR$/js/Carousel.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/service.js" afterPath="$PROJECT_DIR$/js/service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/tec-temp.html" afterPath="$PROJECT_DIR$/templates/tec-temp.html" />
     </list>
     <ignored path="noobfan.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,11 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="tec-temp.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="tec-temp.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/tec-temp.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.26046512">
-              <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+            <state vertical-scroll-proportion="-8.888889">
+              <caret line="25" column="36" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -46,16 +39,36 @@
       <file leaf-file-name="service.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/service.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-75.73333">
-              <caret line="220" column="58" selection-start-line="220" selection-start-column="58" selection-end-line="220" selection-end-column="58" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="200" column="33" selection-start-line="200" selection-start-column="33" selection-end-line="200" selection-end-column="33" />
               <folding>
-                <element signature="e#2173#7145#0" expanded="false" />
-                <element signature="e#2517#3614#0" expanded="false" />
-                <element signature="e#3637#3824#0" expanded="false" />
-                <element signature="e#4695#4747#0" expanded="false" />
-                <marker date="1469353667970" expanded="true" signature="1254:1349" placeholder="..." />
-                <marker date="1469353667970" expanded="true" signature="1254:2036" placeholder="..." />
+                <element signature="e#2177#7149#0" expanded="false" />
+                <element signature="e#2521#3618#0" expanded="false" />
+                <element signature="e#3641#3828#0" expanded="false" />
+                <element signature="e#4699#4751#0" expanded="false" />
+                <marker date="1469428838701" expanded="true" signature="1258:1353" placeholder="..." />
+                <marker date="1469428838701" expanded="true" signature="1258:2040" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tec_carousel.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dataFile/tec_carousel.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5587893">
+              <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="indexData.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dataFile/indexData.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="1" selection-start-line="0" selection-start-column="0" selection-end-line="27" selection-end-column="1" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -63,9 +76,26 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.777778">
-              <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
+            <state vertical-scroll-proportion="-11.555555">
+              <caret line="32" column="10" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Carousel.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/Carousel.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="113" column="52" selection-start-line="113" selection-start-column="52" selection-end-line="113" selection-end-column="52" />
+              <folding>
+                <element signature="e#0#40#0" expanded="false" />
+                <marker date="1469407993048" expanded="true" signature="1708:1753" placeholder="..." />
+                <marker date="1469407993048" expanded="true" signature="1708:1971" placeholder="..." />
+                <marker date="1469407993048" expanded="true" signature="1708:2226" placeholder="..." />
+                <marker date="1469407993048" expanded="true" signature="1708:2295" placeholder="..." />
+                <marker date="1469407993048" expanded="true" signature="1708:2317" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -73,8 +103,8 @@
       <file leaf-file-name="mainstyle.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/mainstyle.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.333333">
-              <caret line="167" column="1" selection-start-line="167" selection-start-column="1" selection-end-line="167" selection-end-column="1" />
+            <state vertical-scroll-proportion="-15.111111">
+              <caret line="189" column="32" selection-start-line="189" selection-start-column="32" selection-end-line="189" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -87,6 +117,7 @@
       <list>
         <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="package_json" />
       </list>
     </option>
   </component>
@@ -108,10 +139,11 @@
         <option value="$PROJECT_DIR$/test.html" />
         <option value="$PROJECT_DIR$/templates/lunTest.html" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/js/Carousel.js" />
-        <option value="$PROJECT_DIR$/css/mainstyle.css" />
         <option value="$PROJECT_DIR$/templates/tec-temp.html" />
+        <option value="$PROJECT_DIR$/css/mainstyle.css" />
+        <option value="$PROJECT_DIR$/js/Carousel.js" />
         <option value="$PROJECT_DIR$/js/service.js" />
+        <option value="$PROJECT_DIR$/dataFile/tec_carousel.json" />
       </list>
     </option>
   </component>
@@ -121,8 +153,8 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="20" />
+    <option name="y" value="48" />
     <option name="width" value="1932" />
     <option name="height" value="1056" />
   </component>
@@ -157,6 +189,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -235,10 +268,23 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="noobfan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="noobfan-kevin.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dataFile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -323,7 +369,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1932" height="1056" extended-state="0" />
+    <frame x="20" y="48" width="1932" height="1056" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1626188" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -611,7 +657,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="109" column="31" selection-start-line="109" selection-start-column="31" selection-end-line="109" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -619,7 +664,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="935" column="0" selection-start-line="935" selection-start-column="0" selection-end-line="935" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -627,7 +671,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.7488372">
           <caret line="47" column="31" selection-start-line="47" selection-start-column="31" selection-end-line="47" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -643,30 +686,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.8888889">
           <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/Carousel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="13" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#40#0" expanded="false" />
-            <marker date="1469346402545" expanded="true" signature="1708:1753" placeholder="..." />
-            <marker date="1469346402545" expanded="true" signature="1708:1971" placeholder="..." />
-            <marker date="1469346402545" expanded="true" signature="1708:2226" placeholder="..." />
-            <marker date="1469346402545" expanded="true" signature="1708:2295" placeholder="..." />
-            <marker date="1469346402545" expanded="true" signature="1708:2317" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/mainstyle.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.333333">
-          <caret line="167" column="1" selection-start-line="167" selection-start-column="1" selection-end-line="167" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -710,33 +729,72 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/service.js">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-75.73333">
-          <caret line="220" column="58" selection-start-line="220" selection-start-column="58" selection-end-line="220" selection-end-column="58" />
+        <state vertical-scroll-proportion="-11.555555">
+          <caret line="32" column="10" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/mainstyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.111111">
+          <caret line="189" column="32" selection-start-line="189" selection-start-column="32" selection-end-line="189" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/Carousel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="113" column="52" selection-start-line="113" selection-start-column="52" selection-end-line="113" selection-end-column="52" />
           <folding>
-            <element signature="e#2173#7145#0" expanded="false" />
-            <element signature="e#2517#3614#0" expanded="false" />
-            <element signature="e#3637#3824#0" expanded="false" />
-            <element signature="e#4695#4747#0" expanded="false" />
-            <marker date="1469353667970" expanded="true" signature="1254:1349" placeholder="..." />
-            <marker date="1469353667970" expanded="true" signature="1254:2036" placeholder="..." />
+            <element signature="e#0#40#0" expanded="false" />
+            <marker date="1469407993048" expanded="true" signature="1708:1753" placeholder="..." />
+            <marker date="1469407993048" expanded="true" signature="1708:1971" placeholder="..." />
+            <marker date="1469407993048" expanded="true" signature="1708:2226" placeholder="..." />
+            <marker date="1469407993048" expanded="true" signature="1708:2295" placeholder="..." />
+            <marker date="1469407993048" expanded="true" signature="1708:2317" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/js/service.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.777778">
-          <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="200" column="33" selection-start-line="200" selection-start-column="33" selection-end-line="200" selection-end-column="33" />
+          <folding>
+            <element signature="e#2177#7149#0" expanded="false" />
+            <element signature="e#2521#3618#0" expanded="false" />
+            <element signature="e#3641#3828#0" expanded="false" />
+            <element signature="e#4699#4751#0" expanded="false" />
+            <marker date="1469428838701" expanded="true" signature="1258:1353" placeholder="..." />
+            <marker date="1469428838701" expanded="true" signature="1258:2040" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataFile/indexData.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="1" selection-start-line="0" selection-start-column="0" selection-end-line="27" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/tec-temp.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26046512">
-          <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+        <state vertical-scroll-proportion="-8.888889">
+          <caret line="25" column="36" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataFile/tec_carousel.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5587893">
+          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
           <folding />
         </state>
       </provider>

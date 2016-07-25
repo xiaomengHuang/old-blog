@@ -5,10 +5,10 @@
 
     var app = angular.module('myApp', ['ngRoute']);
     app.controller('myCtrl', [ '$scope', function($scope) {
-            $scope.nav_active = localStorage.getItem('nav_active')||0;
+            $scope.nav_active = sessionStorage.getItem('nav_active')||0;
             $scope.ulClick = function(num){
                 $scope.nav_active = num;
-                localStorage.setItem('nav_active',num);
+                sessionStorage.setItem('nav_active',num);
             }
     }]);
 
@@ -198,7 +198,7 @@
     }]);
 
     app.controller('myTecCtrl',['$scope', function($scope){
-                console.log('tec page');
+        $scope.tec_Carousel = [];
         var setting = {
             time:5000,
             ulClass:'HXM-tec-lunBo-ul'
