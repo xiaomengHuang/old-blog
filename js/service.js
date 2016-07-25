@@ -199,6 +199,7 @@
 
     app.controller('myTecCtrl',['$scope','Repo', function($scope,Repo){
         $scope.tec_Carousel = [];
+        $scope.tec_articles = [];
         var setting = {
             time:5000,
             ulClass:'HXM-tec-lunBo-ul'
@@ -216,11 +217,37 @@
             $scope.$apply($scope.tec_Carousel);
             $('.HXM-tec-lunBo').Carousel(setting);
         });
+
+        Repo.getRepoObj().read('master', 'dataFile/tec_articles.json', function(err, data) {
+            $scope.tec_articles=[];
+            var __data__ = JSON.parse(data);
+            for(x in __data__){
+                var _data = {};
+                _data.title = __data__[x].title;
+                _data.path = __data__[x].path;
+                _data.src = __data__[x].imgSrc;
+                _data.desc = __data__[x].desc;
+                $scope.tec_articles.push(_data);
+            }
+            $scope.$apply($scope.tec_articles);
+        });
+
+
+        $scope.goTecDetail = function(path){
+            location.href = '#/detail';
+            console.log(path);
+            sessionStorage.setItem('detailUrl',path);
+        }
     }]);
 
     app.controller('myLifeCtrl',['$scope', function($scope){
             console.log('life page');
             }]);
+
+    app.controller('detailCtrl',['$scope', function($scope){
+        console.log('detail page');
+        console.log(sessionStorage.getItem('detailUrl'));
+    }]);
 
     app.config(['$routeProvider', function($routeProvider){
 
@@ -231,6 +258,9 @@
                 templateUrl:'./templates/tec-temp.html'})
             .when('/life',{
                 templateUrl:'./templates/life-temp.html'})
+            .when('/detail',{
+                templateUrl:'./templates/article-detail.html'
+            })
             .otherwise({redirectTo:'/'});
     }]);
 

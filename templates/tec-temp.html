@@ -25,30 +25,18 @@
         <div class="tec-contain-title">
             <h3>最新文章</h3>
         </div>
-        <div class="tec-pis">
+        <div class="tec-pis" ng-repeat="article in tec_articles">
             <div>
                 <div class="col-xs-2 col-sm-2 col-mg-2 col-lg-2 tec-pic">
-                    <img src="./lib/img/newhome.jpg" class="tec-pics">
+                    <img ng-src="{{article.src}}" class="tec-pics">
                 </div>
                 <div class="col-xs-10 col-sm-10 col-mg-10 col-lg-10 tec-text">
-                    <span>打开ID哈市卡打死了打大量可达打卡点时空龙大厦打开来打手打算快乐到死打算快乐好</span>
+                    <h3 ng-click="goTecDetail(article.path)">{{article.title}}</h3>
+                    <span>{{article.desc}}</span>
                 </div>
             </div>
             <div class="tec-btn">
-                <a class="btn">阅读全文>></a>
-            </div>
-        </div>
-        <div class="tec-pis">
-            <div>
-                <div class="col-xs-2 col-sm-2 col-mg-2 col-lg-2 tec-pic">
-                    <img src="./lib/img/newhome.jpg" class="tec-pics">
-                </div>
-                <div class="col-xs-10 col-sm-10 col-mg-10 col-lg-10 tec-text">
-                    <span>打开ID哈市卡打死了打大量可达打卡点时空龙大厦打开来打手打算快乐到死打算快乐好</span>
-                </div>
-            </div>
-            <div class="tec-btn">
-                <a class="btn">阅读全文>></a>
+                <a class="btn" ng-click="goTecDetail(article.path)">阅读全文>></a>
             </div>
         </div>
     </div>

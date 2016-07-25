@@ -206,7 +206,16 @@ footer div{
     position: relative;
 }
 .tec-text span{
-    font-size: 14px;
+     font-size: 14px;
+    text-indent: 2em;
+    display: block;
+ }
+.tec-text h3{
+    cursor: pointer;
+    color: rebeccapurple;
+}
+.tec-text h3:hover{
+    text-decoration: underline;
 }
 .tec-btn{
     position: absolute;
