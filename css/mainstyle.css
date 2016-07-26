@@ -265,9 +265,18 @@ footer div{
     margin-top: 20px!important;
 }
 .tec-detail-head a{
-    background: #8666B8;
     border-radius: 0;
     color: white;
+    transition:all 1s;
+    -moz-transition:all 1s; /* Firefox 4 */
+    -webkit-transition:all 1s; /* Safari and Chrome */
+    -o-transition:all 1s; /* Opera */
+}
+.tec-detail-head a:hover{
+    transform: rotate(180deg);
+    -moz-transform:rotate(180deg) ;
+    -o-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
 }
 .tec-detail-body{
     margin-bottom: 20px!important;
@@ -332,7 +341,15 @@ footer div{
 .recommend-article ul li a{
     color: black;
 }
-
+.tec-ac{
+    background: #03B8CF;
+}
+.life-ac{
+    background: #38B03F;
+}
+.tec-share{
+    background: #EA644A;
+}
 
 
 
