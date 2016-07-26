@@ -245,6 +245,7 @@
 
     app.controller('detailCtrl',['$scope','Repo', function($scope,Repo){
         $scope.detailInfo = {};
+        $scope.detail = [];
         Repo.getRepoObj().read('master',sessionStorage.getItem('detailUrl'), function(err, data) {
             $scope.detailInfo={};
             var __data__ = JSON.parse(data);
@@ -252,16 +253,17 @@
             $scope.detailInfo.time = __data__.time;
             $scope.detailInfo.editor = __data__.editor;
             $scope.detailInfo.type = __data__.type;
-            $scope.detailInfo.detail = [];
+            var part = [];
             var imgList = __data__.img.split('##');
             var detail = __data__.detail.split('##');
             var _data = {};
-            for(var i=0;i<detail.length>imgList.length?detail.length:imgList.length;i++){
-                _data.detail = detail[i];
+            for(var i=0;i<(detail.length>imgList.length?detail.length:imgList.length);i++){
+                _data.det = detail[i]||'';
                 _data.img = imgList[i]||'';
-                $scope.detailInfo.detail.push(_data);
+                part.push(_data);
             }
-            console.log( $scope.detailInfo);
+            $scope.detail=part;
+            $scope.$apply($scope.detailInfo,$scope.detail);
         });
         console.log('detail page');
         console.log(sessionStorage.getItem('detailUrl'));

@@ -7,15 +7,11 @@
         <hr>
         <div class="tec-detail-body">
             <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-                <h3 class="article-title">title</h3>
-                <span class="article-time">发布时间：2014-12-12 作者：kevin 分类：javascript</span>
-                <div class="article-paragraph">
-                    <p>打开手机的哈大声哭了多久啊是大理石科技大厦的大陆开始；就打算大四了；看得见啊速度asda深刻理解大苏打似的卡是打算</p>
-                    <img src="lib/img/shendu.png" alt="">
-                </div>
-                <div class="article-paragraph">
-                    <p>dasdasldasghdbjasdk</p>
-                    <img src="lib/img/shendu.png" alt="">
+                <h3 class="article-title">{{detailInfo.title}}</h3>
+                <span class="article-time">发布时间：{{detailInfo.time}} 作者：{{detailInfo.editor}} 分类：{{detailInfo.type}}</span>
+                <div class="article-paragraph" ng-repeat="par in detail track by $index">
+                    <p>{{par.det}}</p>
+                    <img ng-src="{{par.img}}">
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
