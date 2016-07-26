@@ -267,16 +267,16 @@ footer div{
 .tec-detail-head a{
     border-radius: 0;
     color: white;
-    transition:all 1s;
-    -moz-transition:all 1s; /* Firefox 4 */
-    -webkit-transition:all 1s; /* Safari and Chrome */
-    -o-transition:all 1s; /* Opera */
+    transition:all 2s;
+    -moz-transition:all 2s; /* Firefox 4 */
+    -webkit-transition:all 2s; /* Safari and Chrome */
+    -o-transition:all 2s; /* Opera */
 }
 .tec-detail-head a:hover{
-    transform: rotate(180deg);
-    -moz-transform:rotate(180deg) ;
-    -o-transform: rotate(180deg);
-    -webkit-transform: rotate(180deg);
+    transform: rotate(360deg);
+    -moz-transform:rotate(360deg) ;
+    -o-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
 }
 .tec-detail-body{
     margin-bottom: 20px!important;
@@ -340,6 +340,7 @@ footer div{
 }
 .recommend-article ul li a{
     color: black;
+    font-size: 14px;
 }
 .tec-ac{
     background: #03B8CF;
