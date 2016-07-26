@@ -235,7 +235,6 @@
 
         $scope.goTecDetail = function(path){
             location.href = '#/detail';
-            console.log(path);
             sessionStorage.setItem('detailUrl',path);
         }
     }]);
