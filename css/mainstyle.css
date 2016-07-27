@@ -160,6 +160,7 @@ footer div{
     padding: 10px!important;
     position: relative;
 }
+
 .tec-pic{
     padding: 0;
     margin: 0;
@@ -362,6 +363,14 @@ footer div{
     height: 200px;
     width: 20%;
     padding: 10px!important;
+    transition:all 1s;
+    -moz-transition:all 1s; /* Firefox 4 */
+    -webkit-transition:all 1s; /* Safari and Chrome */
+    -o-transition:all 1s; /* Opera */
+}
+.life-head ul li:hover{
+    z-index: 10;
+    transform: scale(1.1);
 }
 .life-head ul li:after{content:".";display:block;height:0;clear:both;visibility:hidden}
 .life-head ul li{_height:1%;}
@@ -374,9 +383,50 @@ footer div{
     width: 100%;
 }
 
+.life-pis{
+    margin-top: 20px!important;
+    background: #DDF4DF;
+    height:200px;
+    border: 1px solid transparent;
+    width: 100%;
+    padding: 10px!important;
+    position: relative;
+    transition:all 1s;
+    -moz-transition:all 1s; /* Firefox 4 */
+    -webkit-transition:all 1s; /* Safari and Chrome */
+    -o-transition:all 1s; /* Opera */
+}
+.life-pis:hover{
+    border: 1px solid #38B03F;
+    border-bottom-right-radius: 50px;
+}
 
-
-
-
+.life-time-line{
+    height: 220px;
+    position: relative;
+}
+.life-line{
+    position: absolute;
+    height: 100%;
+    width: 3px;
+    background: #DDF4DF;
+    left: 80%;
+}
+.life-dou{
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background: #38B03F;
+    border-radius: 50%;
+    left:-6px;
+    top: 40%;
+}
+.life-time{
+    position: absolute;
+    top: 39%;
+    left: 40%;
+    color: green;
+    font-size: 15px;
+}
 
 

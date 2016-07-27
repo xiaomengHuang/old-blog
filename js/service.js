@@ -240,15 +240,17 @@
         }
     }]);
 
-    app.controller('myLifeCtrl',['$scope', function($scope){
+    app.controller('myLifeCtrl',['$scope','Repo', function($scope,Repo){
         $scope.life_articles = [];
         Repo.getRepoObj().read('master','dataFile/life_articles.json', function(err, data) {
             var __data__ = JSON.parse(data);
+            console.log(__data__);
             var _data;
             for(x in __data__){
                 _data = {};
                 _data.src = __data__[x].img;
                 _data.desc = __data__[x].desc;
+                _data.time = __data__[x].time;
                 $scope.life_articles.push(_data);
             }
             $scope.$apply($scope.life_articles);

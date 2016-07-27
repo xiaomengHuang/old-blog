@@ -56,6 +56,7 @@
             $this.append(style);
         },
         getTimePicker:function(ulClass,num,sec){
+            clearInterval(picTimer);
            return setInterval(function(){
                private_methods.animateFunc(ulClass,num);
            },sec);

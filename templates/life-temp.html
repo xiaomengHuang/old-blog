@@ -1,6 +1,13 @@
 <div class="container-fluid row" ng-controller="myLifeCtrl">
-    <div class="hidden-md col-lg-2">1</div>
-    <div class="col-md-12 col-lg-8" style="background: #f1f1f1">
+    <div class="hidden-md col-lg-2" style="padding-top: 220px">
+        <div class="life-time-line" ng-repeat="article in life_articles">
+            <div class="life-line">
+                <div class="life-dou"></div>
+            </div>
+            <div class="life-time">{{article.time}}</div>
+        </div>
+    </div>
+    <div class="col-md-12 col-lg-8" >
         <div class="life-head">
             <ul class="life-head-pic">
                 <li><img src="lib/img/logo.jpg" alt=""></li>
@@ -11,7 +18,7 @@
             </ul>
         </div>
         <div class="life-body">
-            <div class="tec-pis" ng-repeat="article in life_articles">
+            <div class="life-pis" ng-repeat="article in life_articles">
                 <div>
                     <div class="col-xs-2 col-sm-2 col-mg-2 col-lg-2 tec-pic">
                         <img ng-src="{{article.src}}" class="tec-pics">
