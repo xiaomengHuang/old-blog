@@ -352,11 +352,27 @@ footer div{
     background: #EA644A;
 }
 
+/*==================================life====================================*/
+.life-head{
 
-
-
-
-
+}
+.life-head ul li {
+    list-style: none;
+    float: left;
+    height: 200px;
+    width: 20%;
+    padding: 10px!important;
+}
+.life-head ul li:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.life-head ul li{_height:1%;}
+.life-head-pic{
+    height: 200px;
+    overflow: hidden;
+}
+.life-head-pic li img{
+    height:100%;
+    width: 100%;
+}
 
 
 

@@ -19,11 +19,11 @@
                 var args = $.extend({}, $.fn.Carousel.defaults, _options);
                 var ulClass = args.ulClass;
                 var num=$('.'+ulClass+' li').length;
+                var sec=args.time;
                 private_methods.initLiIndex(ulClass,num);
                 private_methods.appendBtn($this,num);
                 private_methods.appendStyle($this);
-                private_methods.btnBindEvent(ulClass,num,$this);
-                var sec=args.time;
+                private_methods.btnBindEvent(ulClass,num,$this,sec);
                 clearInterval(picTimer);
                 picTimer = private_methods.getTimePicker(ulClass,num,sec);
                 $this.mouseover(
@@ -95,7 +95,7 @@
             $this.append(btn);
             $('.carouselBtn').css({'z-index':parseInt(num)+2});
         },
-        btnBindEvent :function(ulClass,num,$this){
+        btnBindEvent :function(ulClass,num,$this,sec){
             $(".carouselBtn li").bind("click",function(){
                 var $ulLi = $('.'+ulClass+' li');
                 //console.log($ulLi);
