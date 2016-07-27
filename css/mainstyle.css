@@ -175,6 +175,7 @@ footer div{
     -moz-transition:all 1s; /* Firefox 4 */
     -webkit-transition:all 1s; /* Safari and Chrome */
     -o-transition:all 1s; /* Opera */
+    border-radius: 14px;
 }
 .tec-pics:hover{
     -moz-transform: scale(1.1);
@@ -210,6 +211,8 @@ footer div{
      font-size: 14px;
     text-indent: 2em;
     display: block;
+    line-height: 26px;
+    color: #666;
  }
 .tec-text h3{
     cursor: pointer;
