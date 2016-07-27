@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="css/uikit.min.css" rel="stylesheet">
+    <script src="../../js/jquery-1.10.2.min.js" ></script>
+    <script src="js/uikit.min.js"></script>
+    <title>ONSHOW</title>
+    <style>
+        .uk-width-1-3,.uk-width-2-3{padding: 0;}
+        .nf-header_index{height: 140px;background: url("img/3.jpg") no-repeat center;}
+        .uk-grid{margin: 0;}
+        html{background: rgba(100,100,100,0.1);font-family: "Microsoft YaHei UI";}
+        #page_god{padding-bottom: 50px;}
+
+        article{background: white;padding: 20px;margin-top: 20px;border:1px solid white;
+        border-radius: 10px;}
+        article:hover{border: 1px solid #8666b8; }
+        article a:hover{text-decoration: none;}
+        article p{font-size: 16px;}
+        .nf-button_index:hover{background: #38b03f;}
+        .nf-author span{margin-right: 20px;color: rgba(0,0,0,0.5);}
+        .nf-part_index{padding: 0;}
+        .nf-part_index img{padding: 4px;border: 1px solid rgba(0,0,0,0.2);}
+        .nf-article_index{margin-left: 10px;}
+        .nf-article_index a:hover{text-decoration: none;color: rgba(255,0,0,0.5);}
+        #hidden_links div{background: white;}
+        .nf-picnews_index,.nf-news_index{background: white;margin-top: 20px;padding: 10px;margin-left: 30px;}
+        .nf-news_index h3{border-bottom: 2px solid #38b03f;}
+        .nf-news_index h3 span{font-size:22px; color: red;}
+        .nf-news_index ul li{margin-bottom: 6px;font-size: 14px;}
+        .nf-news_index ul li a{color: black;}
+        .nf-news_index ul li a:hover{color: rgba(255,0,0,0.6);}
+        .nf-picnews_index{height: 160px;overflow: hidden;}
+        #nf-picnews_index{position: relative;}
+        .nf-newspart_index{height: 170px;padding: 10px;}
+        .nf-newspart_index img{height: 140px;width: 100%;}
+        .nf-newspart_index p{font-size: 16px;}
+        .nf-h2_index{margin-top: 20px;padding-top: 10px;padding-left: 10px;
+            background:white; border-bottom: 2px solid #ea644a;}
+        .nf-h2_index h2{color: rgba(0,0,0,0.6);}
+
+        footer{background: rgba(0,0,0,0.6);height: 40px;position: fixed;left: 0;right: 0;bottom: 0;
+        padding-top: 4px;}
+        footer a{}
+    </style>
+</head>
+<body>
+<div id="hidden_links" class="uk-offcanvas">
+    <div class="uk-offcanvas-bar uk-offcanvas-bar-flip">
+        <a class="uk-button uk-width-1-1 uk-button-primary">主页</a>
+        <a class="uk-button uk-width-1-1 uk-button-primary">新闻</a>
+        <a class="uk-button uk-width-1-1 uk-button-primary">学习</a>
+    </div>
+</div>
+<div class="uk-grid" id="page_god">
+
+    <div class="uk-width-9-10 uk-container-center">
+        <div class="uk-grid">
+            <header class="uk-width-1-1 nf-header_index" >
+            </header>
+            <div class="uk-width-2-3">
+                <div class="nf-h2_index"><h2>推荐博文</h2></div>
+                <article>
+                <a href="#"><h2>冬天来了，春天还会远吗？</h2></a>
+                <p class="nf-author"><span>2015-12-28</span><span>作者：黄晓萌</span></p>
+                <div class="uk-grid">
+                    <div class="uk-width-1-3 nf-part_index">
+                        <img src="img/1.jpg"/>
+                    </div>
+                    <div class="uk-width-2-3 nf-part_index">
+                        <div class="nf-article_index">
+                            <p>初冬的早晨，一缕阳光穿过窗帘，悄悄驻足在我惺忪的眼眸。
+                                起身掀开窗帘，阳光潮水般似的涌入，瞬间充斥了小屋。
+                                金色的空间，沐浴在阳光里，让人精神为之一爽。
+                                于是乎，情不自禁想起《西风颂》里，雪莱深情地抒发：
+                                冬天来了，春天还会远吗·····
+                                金色的空间，沐浴在阳光里，让人精神为之一爽。
+                                于是乎，情不自禁想起《西风颂》里，雪莱深情地抒发：
+                                冬天来了，春天还会远吗·····
+                            </p>
+                            <button class="uk-button nf-button_index uk-align-right" href="http://www.huangxiaomeng.top">阅读更多</button>
+                        </div>
+                    </div>
+                </div>
+            </article>
+                <article>
+                    <a href="#"><h2>冬天来了，春天还会远吗？</h2></a>
+                    <p class="nf-author"><span>2015-12-28</span><span>作者：黄晓萌</span></p>
+                    <div class="uk-grid">
+                        <div class="uk-width-1-3 nf-part_index">
+                            <img src="img/2.jpg"/>
+                        </div>
+                        <div class="uk-width-2-3 nf-part_index">
+                            <div class="nf-article_index">
+                                <p>初冬的早晨，一缕阳光穿过窗帘，悄悄驻足在我惺忪的眼眸。
+                                    起身掀开窗帘，阳光潮水般似的涌入，瞬间充斥了小屋。
+                                    金色的空间，沐浴在阳光里，让人精神为之一爽。
+                                    于是乎，情不自禁想起《西风颂》里，雪莱深情地抒发：
+                                    冬天来了，春天还会远吗·····
+                                    金色的空间，沐浴在阳光里，让人精神为之一爽。
+                                    于是乎，情不自禁想起《西风颂》里，雪莱深情地抒发：
+                                    冬天来了，春天还会远吗·····
+                                </p>
+                                <button class="uk-button nf-button_index uk-align-right" href="http://www.huangxiaomeng.top">阅读更多</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <a href="#"><h2>冬天来了，春天还会远吗？</h2></a>
+                    <p class="nf-author"><span>2015-12-28</span><span>作者：黄晓萌</span></p>
+                    <div class="uk-grid">
+                        <div class="uk-width-1-3 nf-part_index">
+                            <img src="img/3.jpg"/>
+                        </div>
+                        <div class="uk-width-2-3 nf-part_index">
+                            <div class="nf-article_index">
+                                <p>初冬的早晨，一缕阳光穿过窗帘，悄悄驻足在我惺忪的眼眸。
+                                    起身掀开窗帘，阳光潮水般似的涌入，瞬间充斥了小屋。
+                                    金色的空间，沐浴在阳光里，让人精神为之一爽。
+                                    于是乎，情不自禁想起《西风颂》里，雪莱深情地抒发：
+                                    冬天来了，春天还会远吗·····
+                                    金色的空间，沐浴在阳光里，让人精神为之一爽。
+                                    于是乎，情不自禁想起《西风颂》里，雪莱深情地抒发：
+                                    冬天来了，春天还会远吗·····
+                                </p>
+                                <button class="uk-button nf-button_index uk-align-right" href="http://www.huangxiaomeng.top">阅读更多</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="uk-width-1-3">
+
+                <div class="nf-news_index">
+                    <h3>最新<span>文章</span></h3>
+                    <ul>
+                        <li><a>冬天来了，春天还会远吗？</a><span class="uk-badge uk-badge-danger">hot</span></li>
+                        <li><a>冬天来了，春天还会远吗？</a><span class="uk-badge uk-badge-danger">hot</span></li>
+                        <li><a>冬天来了，春天还会远吗？</a><span class="uk-badge uk-badge-danger">hot</span></li>
+                        <li><a>冬天来了，春天还会远吗？</a></li>
+                        <li><a>冬天来了，春天还会远吗？</a></li>
+                        <li><a>冬天来了，春天还会远吗？</a></li>
+                    </ul>
+                </div>
+                <div class="nf-picnews_index">
+                    <div id="nf-picnews_index">
+                        <div class="nf-newspart_index">
+                            <img src="img/logo.png" />
+                        </div>
+                        <div class="nf-newspart_index">
+                            <h1>你的未来，不可限量！</h1>
+                            <p>激扬你的能量，放荡你的磁场。</p>
+                            <p>来吧，让世界看看你无与伦比的强。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="nf-news_index">
+                    <h3>最新<span>教程</span></h3>
+                    <ul>
+                        <li><a>冬天来了，春天还会远吗？</a></li>
+                        <li><a>冬天来了，春天还会远吗？</a></li>
+                        <li><a>冬天来了，春天还会远吗？</a></li>
+                        <li><a>冬天来了，春天还会远吗？</a></li>
+                        <li><a>冬天来了，春天还会远吗？</a></li>
+                        <li><a>冬天来了，春天还会远吗？</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer  class="uk-width-1-1">
+        <a class="uk-button  uk-align-right" data-uk-offcanvas="{target:'#hidden_links'}">打开侧栏</a>
+        <a href="javascript:scroll(0,0)" class="uk-button uk-align-right" id="back_top">回到顶部</a>
+    </footer>
+
+</div>
+<script>
+    var FLAG = true;
+
+    setInterval(function(){
+        if(FLAG){
+            $('#nf-picnews_index').animate({bottom:'190px'},2000);
+            FLAG=false;
+        }else{
+            $('#nf-picnews_index').animate({bottom:'0'},2000);
+            FLAG = true;
+        }
+    },6000);
+</script>
+</body>
+</html>

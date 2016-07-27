@@ -61,16 +61,16 @@
             <div class="tec-pis" ng-repeat="temp in blog_temps">
                 <div>
                     <div class="col-xs-2 col-sm-2 col-mg-2 col-lg-2 tec-pic">
-                        <img ng-src="{{temp.src}}" class="tec-pics">
+                        <img ng-src="{{temp.img}}" class="tec-pics">
                     </div>
                     <div class="col-xs-10 col-sm-10 col-mg-10 col-lg-10 tec-text">
-                        <h3 ng-click="goTecDetail(temp.path)">{{temp.title}}</h3>
+                        <h3>{{temp.title}}</h3>
                         <span>{{temp.desc}}</span>
                     </div>
                 </div>
                 <div class="tec-btn">
-                    <a class="btn" ng-click="goTecDetail(temp.path)">阅读全文>></a>
-                    <a class="btn" ng-click="goTecDetail(temp.path)">模板下载</a>
+                    <a class="btn" ng-href="{{temp.src}}" target="_blank">预览效果>></a>
+                    <a class="btn" download="">模板下载</a>
                 </div>
             </div>
         </div>

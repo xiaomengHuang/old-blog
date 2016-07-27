@@ -292,15 +292,16 @@
             $(this).parent().parent().addClass('img-active').siblings().removeClass('img-active');
         });
 
-        Repo.getRepoObj().read('master','dataFile/life_articles.json', function(err, data) {
+        Repo.getRepoObj().read('master','dataFile/temp-share.json', function(err, data) {
             var __data__ = JSON.parse(data);
             console.log(__data__);
             var _data;
             for(x in __data__){
                 _data = {};
-                _data.src = __data__[x].img;
+                _data.img = __data__[x].img;
+                _data.src = __data__[x].src;
                 _data.desc = __data__[x].desc;
-                _data.time = __data__[x].time;
+                _data.title = __data__[x].title;
                 $scope.blog_temps.push(_data);
             }
             $scope.$apply($scope.blog_temps);

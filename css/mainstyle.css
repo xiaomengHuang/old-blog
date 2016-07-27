@@ -304,6 +304,7 @@ footer div{
 .article-paragraph p{
     text-indent: 2em;
     text-align: left;
+    word-break: break-all;
 }
 .article-paragraph img{
     width: 80%;
