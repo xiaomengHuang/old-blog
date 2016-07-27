@@ -36,10 +36,11 @@
             return {
                 restrict: 'E',
                 template : '<ul class="nav navbar-nav nav-list">\
-                    <li ng-click="ulClick(0)" ng-class="{0:\'active\',1:\'\',2:\'\',3:\'\'}[nav_active]"><a href="#/">主页 <span class="sr-only">(current)</span></a></li>\
-                    <li ng-click="ulClick(1)" ng-class="{0:\'\',1:\'active\',2:\'\',3:\'\'}[nav_active]"><a href="#/life">生活小记</a></li>\
-                    <li ng-click="ulClick(2)" ng-class="{0:\'\',1:\'\',2:\'active\',3:\'\'}[nav_active]"><a href="#/tec">技术积累</a></li>\
-                    <li ng-click="ulClick(3)" ng-class="{0:\'\',1:\'\',2:\'\',3:\'active\'}[nav_active]"><a href="#/blogTemp">模板分享</a></li>\
+                    <li ng-click="ulClick(0)" ng-class="{0:\'active\',1:\'\',2:\'\',3:\'\',4:\'\'}[nav_active]"><a href="#/">主页 <span class="sr-only">(current)</span></a></li>\
+                    <li ng-click="ulClick(1)" ng-class="{0:\'\',1:\'active\',2:\'\',3:\'\',4:\'\'}[nav_active]"><a href="#/life">生活小记</a></li>\
+                    <li ng-click="ulClick(2)" ng-class="{0:\'\',1:\'\',2:\'active\',3:\'\',4:\'\'}[nav_active]"><a href="#/tec">技术积累</a></li>\
+                    <li ng-click="ulClick(3)" ng-class="{0:\'\',1:\'\',2:\'\',3:\'active\',4:\'\'}[nav_active]"><a href="#/blogTemp">模板分享</a></li>\
+                    <li ng-click="ulClick(4)" ng-class="{0:\'\',1:\'\',2:\'\',3:\'\',4:\'active\'}[nav_active]"><a href="#/noobfan">noobfan</a></li>\
                     </ul>',
                 replace: true
             };
@@ -288,13 +289,13 @@
 
     app.controller('blogTempCtrl',['$scope','Repo', function($scope,Repo){
         $scope.blog_temps = [];
+        $scope.downloadUrl = 'https://github.com/noobfan-kevin/noobfan-kevin.github.io/blob/master/';
         $('.temp-img').off('click').on('click',function(){
             $(this).parent().parent().addClass('img-active').siblings().removeClass('img-active');
         });
 
         Repo.getRepoObj().read('master','dataFile/temp-share.json', function(err, data) {
             var __data__ = JSON.parse(data);
-            console.log(__data__);
             var _data;
             for(x in __data__){
                 _data = {};
@@ -302,6 +303,7 @@
                 _data.src = __data__[x].src;
                 _data.desc = __data__[x].desc;
                 _data.title = __data__[x].title;
+                _data.download = $scope.downloadUrl+__data__[x].src;
                 $scope.blog_temps.push(_data);
             }
             $scope.$apply($scope.blog_temps);
@@ -322,6 +324,9 @@
             })
             .when('/blogTemp',{
                 templateUrl:'./templates/blog-temp.html'
+            })
+            .when('/noobfan',{
+                templateUrl:'./templates/noobfan.html'
             })
             .otherwise({redirectTo:'/'});
     }]);
