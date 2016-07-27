@@ -36,11 +36,10 @@
             return {
                 restrict: 'E',
                 template : '<ul class="nav navbar-nav nav-list">\
-                    <li ng-click="ulClick(0)" ng-class="{0:\'active\',1:\'\',2:\'\',3:\'\',4:\'\'}[nav_active]"><a href="#/">主页 <span class="sr-only">(current)</span></a></li>\
-                    <li ng-click="ulClick(1)" ng-class="{0:\'\',1:\'active\',2:\'\',3:\'\',4:\'\'}[nav_active]"><a href="#/life">生活小记</a></li>\
-                    <li ng-click="ulClick(2)" ng-class="{0:\'\',1:\'\',2:\'active\',3:\'\',4:\'\'}[nav_active]"><a href="#/tec">技术积累</a></li>\
-                    <li ng-click="ulClick(3)" ng-class="{0:\'\',1:\'\',2:\'\',3:\'active\',4:\'\'}[nav_active]"><a href="#/moves">影评</a></li>\
-                    <li ng-click="ulClick(4)" ng-class="{0:\'\',1:\'\',2:\'\',3:\'\',4:\'active\'}[nav_active]"><a href="#/blogTemp">博客模板</a></li>\
+                    <li ng-click="ulClick(0)" ng-class="{0:\'active\',1:\'\',2:\'\',3:\'\'}[nav_active]"><a href="#/">主页 <span class="sr-only">(current)</span></a></li>\
+                    <li ng-click="ulClick(1)" ng-class="{0:\'\',1:\'active\',2:\'\',3:\'\'}[nav_active]"><a href="#/life">生活小记</a></li>\
+                    <li ng-click="ulClick(2)" ng-class="{0:\'\',1:\'\',2:\'active\',3:\'\'}[nav_active]"><a href="#/tec">技术积累</a></li>\
+                    <li ng-click="ulClick(3)" ng-class="{0:\'\',1:\'\',2:\'\',3:\'active\'}[nav_active]"><a href="#/blogTemp">模板分享</a></li>\
                     </ul>',
                 replace: true
             };
@@ -287,6 +286,27 @@
         console.log(sessionStorage.getItem('detailUrl'));
     }]);
 
+    app.controller('blogTempCtrl',['$scope','Repo', function($scope,Repo){
+        $scope.blog_temps = [];
+        $('.temp-img').off('click').on('click',function(){
+            $(this).parent().parent().addClass('img-active').siblings().removeClass('img-active');
+        });
+
+        Repo.getRepoObj().read('master','dataFile/life_articles.json', function(err, data) {
+            var __data__ = JSON.parse(data);
+            console.log(__data__);
+            var _data;
+            for(x in __data__){
+                _data = {};
+                _data.src = __data__[x].img;
+                _data.desc = __data__[x].desc;
+                _data.time = __data__[x].time;
+                $scope.blog_temps.push(_data);
+            }
+            $scope.$apply($scope.blog_temps);
+        });
+    }]);
+
     app.config(['$routeProvider', function($routeProvider){
 
         $routeProvider
@@ -298,6 +318,9 @@
                 templateUrl:'./templates/life-temp.html'})
             .when('/detail',{
                 templateUrl:'./templates/article-detail.html'
+            })
+            .when('/blogTemp',{
+                templateUrl:'./templates/blog-temp.html'
             })
             .otherwise({redirectTo:'/'});
     }]);

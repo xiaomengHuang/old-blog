@@ -1,0 +1,79 @@
+<div class="container-fluid row" ng-controller="blogTempCtrl">
+    <div class="col-md-2 col-lg-2 col-xs-2 col-sm-2"></div>
+    <div class="col-md-8 col-lg-8 col-xs-8 col-sm-8">
+        <div class="page-header">
+            <h1>实力模板分享<small>所有模本只提供页面</small></h1>
+        </div>
+        <div class="blog-temp-head">
+            <ul>
+                <li >
+                    <div class="head-contain">
+                        <div class="temp-img">
+                            <img src="lib/img/blog/shendu.png">
+                            <div class="img-hover"></div>
+                        </div>
+                        <div class="temp-desc">
+                            <h3>深度科技网站</h3>
+                            <span>采用bootstrap加原声方式</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="head-contain" >
+                        <div class="temp-img">
+                            <img src="lib/img/blog/shendu.png">
+                            <div class="img-hover"></div>
+                        </div>
+                        <div class="temp-desc">
+                            <h3>深度科技网站</h3>
+                            <span>采用bootstrap加原声方式</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="head-contain">
+                        <div class="temp-img">
+                            <img src="lib/img/blog/shendu.png">
+                            <div class="img-hover"></div>
+                        </div>
+                        <div class="temp-desc">
+                            <h3>深度科技网站</h3>
+                            <span>采用bootstrap加原声方式</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="img-active">
+                    <div class="head-contain">
+                        <div class="temp-img">
+                            <img src="lib/img/blog/shendu.png">
+                            <div class="img-hover"></div>
+                        </div>
+                        <div class="temp-desc">
+                            <h3>深度科技网站</h3>
+                            <span>采用bootstrap加原声方式</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <div class="blog-temp-body">
+            <div class="tec-pis" ng-repeat="temp in blog_temps">
+                <div>
+                    <div class="col-xs-2 col-sm-2 col-mg-2 col-lg-2 tec-pic">
+                        <img ng-src="{{temp.src}}" class="tec-pics">
+                    </div>
+                    <div class="col-xs-10 col-sm-10 col-mg-10 col-lg-10 tec-text">
+                        <h3 ng-click="goTecDetail(temp.path)">{{temp.title}}</h3>
+                        <span>{{temp.desc}}</span>
+                    </div>
+                </div>
+                <div class="tec-btn">
+                    <a class="btn" ng-click="goTecDetail(temp.path)">阅读全文>></a>
+                    <a class="btn" ng-click="goTecDetail(temp.path)">模板下载</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2 col-lg-2 col-xs-2 col-sm-2"></div>
+</div>

@@ -429,4 +429,53 @@ footer div{
     font-size: 15px;
 }
 
-
+/**/
+.blog-temp-head{
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+}
+.blog-temp-head ul li{
+    list-style: none;
+    float: left;
+    height: 100%;
+    width: 25%;
+}
+.head-contain{
+    height: 100%;
+}
+.head-contain img{
+    height: 100%;
+    width: 100%;
+}
+.img-hover{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255,255,255,0.6);
+}
+.temp-img{
+    cursor: pointer;
+    padding: 2px!important;
+    height:150px;
+    position: relative;
+}
+.temp-desc{
+    display: none;
+    text-align: center;
+    height: 150px;
+    border-bottom: 4px solid #ea644a;
+}
+.temp-desc h3{
+    margin: 0;
+}
+.img-active .img-hover{
+    display: none;
+}
+.img-active .temp-desc{
+    display: block;
+}

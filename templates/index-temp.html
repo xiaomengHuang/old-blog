@@ -74,8 +74,9 @@
 
     <script language="JavaScript">
         var FLAG = true;
-
-        setInterval(function(){
+        var timeP ;
+        clearInterval(timeP);
+        timeP = setInterval(function(){
             if(FLAG){
                 $('#body_header').animate({bottom:'174px'},2000);
                 FLAG=false;
@@ -84,7 +85,6 @@
                 FLAG = true;
             }
         },6000);
-
     </script>
 </div>
 <script>
