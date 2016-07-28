@@ -1,0 +1,21 @@
+>本文采用[markdown](http://www.bootcdn.cn/markdown.js/)编写
+***
+    `
+    $(function(){
+        $("#m_btn").mousedown(function(){
+            if(!$(this).is(":animated")){
+            $(this).animate({
+                left:"+=5px",
+                top:"+=5px",
+                height:"-=10px",
+                width:"-=10px"
+                },100)
+                .animate({
+                left:"-=5px",
+                top:"-=5px",
+                height:"+=10px",
+                width:"+=10px"
+                },100);}
+        });
+    });
+    `
