@@ -3,13 +3,15 @@
 首先介绍find命令：
 
 1．命令格式：
-`
+
+    `
     find pathname -options [-print -exec -ok ...]
-`
+    `
 eg:
-`
+
+    `
     find /home/huangxiaomeng/  -mtime +3 -name "*.txt" -exec rm -rf {} \;
-`
+    `
 如上所示，该命令可分为上面四个部分，
 
 1，[/home/huangxiaomeng/]()为需要执行命令的目录，比如需要删除文件所在的目录。
