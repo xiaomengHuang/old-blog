@@ -7,29 +7,24 @@ bind(type,[data],fn) 为每个匹配元素的特定事件绑定事件处理函�
 EG:::::::
 ***
 
-`$(document).ready(function(){
+ `$(document).ready(function(){};`
 
-}
- $(" #tag_are ").on("click",".my_tag",function(){
+ `$(" #tag_are ").on("click",".my_tag",function(){`
 
- }
+  `$(this).addClass("test"); //这种情况test会加在点击的 my_tag元素上`
 
- $(this).addClass("test"); //这种情况test会加在点击的 my_tag元素上
+ `});`
 
- });
+ `$(document).ready(function(){};`
 
- $(document).ready(function(){
+ `$(" #tag_are ").on("click",".my_tag",function(){`
 
- }
+ `$(this).addClass("test"); //这种情况test会加在tag_are上。`
 
- $(" #tag_are ").on("click",".my_tag",function(){
-
- $(this).addClass("test"); //这种情况test会加在tag_are上。
-
- });`
+ `});`
  ***
  也就是触发事件后，this是有区别的。
 
  on上的类被作为选择器处理，**selector**
- 
+
  bind上的类被作为判断数据处理。**data**
