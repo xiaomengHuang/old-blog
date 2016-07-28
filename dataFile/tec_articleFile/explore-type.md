@@ -1,7 +1,7 @@
 >本文采用[markdown](http://www.bootcdn.cn/markdown.js/)编写
 ###下面整理的是一套判断方法：
 ***
-`
+    `
     function getExplorer() {
         var explorer = window.navigator.userAgent ;
         //ie
@@ -25,4 +25,4 @@
         alert("Safari");
         }
     }
-`
+    `
