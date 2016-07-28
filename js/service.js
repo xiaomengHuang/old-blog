@@ -124,13 +124,19 @@
         var Mins = new Chart(two).Doughnut(_data_,_option);
         Repo.getRepoObj().read('master', 'dataFile/indexData.json', function(err, data) {
             var __data__ = JSON.parse(data);
+            var len = 0;
             for(x in __data__){
+                x>len?len=x:len;
+            }
+            for(;len>0;len--){
                 var _data = {};
-                _data.title = __data__[x].artName;
-                _data.editor = __data__[x].artUser;
-                _data.detail = __data__[x].artDetail.split('##');
-                _data.src = __data__[x].artSrc;
-                $scope.article.push(_data);
+                if(__data__[len]){
+                    _data.title = __data__[len].artName;
+                    _data.editor = __data__[len].artUser;
+                    _data.detail = __data__[len].artDetail.split('##');
+                    _data.src = __data__[len].artSrc;
+                    $scope.article.push(_data);
+                }
             }
             $scope.$apply($scope.article);
 
@@ -222,13 +228,19 @@
             $scope.tec_articles=[];
             var __data__ = JSON.parse(data);
             var _data;
+            var len=0;
             for(x in __data__){
+                x>len?len=x:len;
+            }
+            for(;len>0;len--){
                 _data = {};
-                _data.title = __data__[x].title;
-                _data.path = __data__[x].path;
-                _data.src = __data__[x].imgSrc;
-                _data.desc = __data__[x].desc;
-                $scope.tec_articles.push(_data);
+                if(__data__[len]){
+                    _data.title = __data__[len].title;
+                    _data.path = __data__[len].path;
+                    _data.src = __data__[len].imgSrc;
+                    _data.desc = __data__[len].desc;
+                    $scope.tec_articles.push(_data);
+                }
             }
             $scope.$apply($scope.tec_articles);
         });
@@ -250,21 +262,15 @@
             for(x in __data__){
                 x>len?len=x:len;
             }
-            console.log(len);
             for(;len>0;len--){
                 _data = {};
-                _data.src = __data__[len].img;
-                _data.desc = __data__[len].desc;
-                _data.time = __data__[len].time;
-                $scope.life_articles.push(_data);
+                if(__data__[len]){
+                    _data.src = __data__[len].img;
+                    _data.desc = __data__[len].desc;
+                    _data.time = __data__[len].time;
+                    $scope.life_articles.push(_data);
+                }
             }
-            //for(x in __data__){
-            //    _data = {};
-            //    _data.src = __data__[x].img;
-            //    _data.desc = __data__[x].desc;
-            //    _data.time = __data__[x].time;
-            //    $scope.life_articles.push(_data);
-            //}
             $scope.$apply($scope.life_articles);
         });
             console.log('life page');
