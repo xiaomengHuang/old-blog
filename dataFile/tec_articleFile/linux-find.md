@@ -4,9 +4,9 @@
 
 1．命令格式：
 
-    `
+    ``
     find pathname -options [-print -exec -ok ...]
-    `
+    ``
 eg:
 
     `
