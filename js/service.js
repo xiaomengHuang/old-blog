@@ -141,26 +141,6 @@
             $scope.$apply($scope.article);
 
         });
-        //TODO cause IE not support Promise，so ...IE is shit
-        //new Promise(function(resolve,reject){
-        //    Repo.getRepoObj().read('master', 'dataFile/indexData.json', function(err, data) {
-        //        var __data__ = JSON.parse(data);
-        //        resolve(__data__);
-        //
-        //    });
-        //}).then(function(info){
-        //    for(x in info){
-        //        var data = {};
-        //        data.title = info[x].artName;
-        //        data.editor = info[x].artUser;
-        //        data.detail = info[x].artDetail.split('##');
-        //        data.src = info[x].artSrc;
-        //        $scope.article.push(data);
-        //    }
-        //    $scope.$apply($scope.article);
-        //}).catch(function(err){
-        //    console.log(err);
-        //});
 
         var _date = new Date();
         var hours = (_date.getHours()>12?_date.getHours()-12:_date.getHours()); //获取当前小时数(0-23)
@@ -328,6 +308,22 @@
         });
     }]);
 
+    app.controller('noobfanCtrl',['$scope','Repo', function($scope,Repo){
+        Repo.getRepoObj().read('master','dataFile/test.md', function(err, data) {
+            console.log(data);
+            var html = markdown.toHTML(data);
+            $('#test').html(html);
+        });
+        //function Editor(input, preview) {
+        //    this.update = function () {
+        //        preview.innerHTML = markdown.toHTML(input.value);
+        //    };
+        //    input.editor = this;
+        //    this.update();
+        //}
+        //var $ = function (id) { return document.getElementById(id); };
+        //new Editor($("text-input"), $("preview"));
+    }]);
     app.config(['$routeProvider', function($routeProvider){
 
         $routeProvider
