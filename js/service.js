@@ -263,23 +263,17 @@
         Repo.getRepoObj().read('master',sessionStorage.getItem('detailUrl'), function(err, data) {
             $scope.detailInfo={};
             var __data__ = JSON.parse(data);
+            console.log(__data__);
             $scope.detailInfo.title = __data__.title;
             $scope.detailInfo.time = __data__.time;
             $scope.detailInfo.editor = __data__.editor;
             $scope.detailInfo.type = __data__.type;
             $scope.articleType = __data__.articleType;
-            var part = [];
-            var imgList = __data__.img.split('##');
-            var detail = __data__.detail.split('##');
-            var _data;
-            for(var i=0;i<(detail.length>imgList.length?detail.length:imgList.length);i++){
-                _data = {};
-                _data.det = detail[i]||'';
-                _data.img = imgList[i]||'';
-                part.push(_data);
-            }
-            $scope.detail=part;
-            $scope.$apply($scope.detailInfo,$scope.detail);
+            $scope.$apply($scope.detailInfo);
+            Repo.getRepoObj().read('master',__data__.md, function(err, data) {
+                $('#art-detail').html(markdown.toHTML(data));
+            });
+
         });
         console.log('detail page');
         console.log(sessionStorage.getItem('detailUrl'));

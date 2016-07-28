@@ -9,9 +9,7 @@
             <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
                 <h3 class="article-title">{{detailInfo.title}}</h3>
                 <span class="article-time">发布时间：{{detailInfo.time}} 作者：{{detailInfo.editor}} 分类：{{detailInfo.type}}</span>
-                <div class="article-paragraph" ng-repeat="par in detail track by $index">
-                    <p>{{par.det}}</p>
-                    <img ng-src="{{par.img}}">
+                <div id="art-detail">
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">

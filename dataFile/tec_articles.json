@@ -9,7 +9,7 @@
   "4":
   {
     "title":"bind和On绑定事件的区别",
-    "path":"dataFile/tec_articleFile/bin-on.json",
+    "path":"dataFile/tec_articleFile/bind-on.json",
     "imgSrc":"lib/img/default.jpg",
     "desc":"bind、on在元素绑定时间上的差异。。。"
   },
