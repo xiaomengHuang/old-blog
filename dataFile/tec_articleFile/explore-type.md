@@ -1,7 +1,8 @@
 >本文采用[markdown](http://www.bootcdn.cn/markdown.js/)编写
 ###下面整理的是一套判断方法：
 ***
-    `function getExplorer() {
+`
+    function getExplorer() {
         var explorer = window.navigator.userAgent ;
         //ie
         if (explorer.indexOf("MSIE") >= 0) {
@@ -23,4 +24,5 @@
         else if(explorer.indexOf("Safari") >= 0){
         alert("Safari");
         }
-    }`
+    }
+`
