@@ -246,13 +246,25 @@
             var __data__ = JSON.parse(data);
             console.log(__data__);
             var _data;
+            var len = 0;
             for(x in __data__){
+                x>len?len=x:len;
+            }
+            console.log(len);
+            for(;len>0;len--){
                 _data = {};
-                _data.src = __data__[x].img;
-                _data.desc = __data__[x].desc;
-                _data.time = __data__[x].time;
+                _data.src = __data__[len].img;
+                _data.desc = __data__[len].desc;
+                _data.time = __data__[len].time;
                 $scope.life_articles.push(_data);
             }
+            //for(x in __data__){
+            //    _data = {};
+            //    _data.src = __data__[x].img;
+            //    _data.desc = __data__[x].desc;
+            //    _data.time = __data__[x].time;
+            //    $scope.life_articles.push(_data);
+            //}
             $scope.$apply($scope.life_articles);
         });
             console.log('life page');
