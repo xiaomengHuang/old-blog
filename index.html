@@ -14,7 +14,6 @@
     <script src="js/github.js"></script>
     <script src="lib/angular.js"></script>
     <script src="lib/angular-route.js"></script>
-    <!--<script src="lib/angular-ui-router.js"></script>-->
     <script src="lib/Chart.js"></script>
     <script src="js/service.js"></script>
     <script src="js/Carousel.js"></script>
@@ -31,6 +30,7 @@
                 <li ng-click="goDetail('tec');ulClick(2)">技术积累</li>
                 <li ng-click="goDetail('blogTemp');ulClick(3)">模板分享</li>
                 <li ng-click="goDetail('noobfan');ulClick(4)">noobfan</li>
+                <li ng-click="goDetail('idea');ulClick(5)">观点</li>
             </ul>
         </div>
         <span class="text-span">今天起，做一个努力的人！</span>
@@ -84,7 +84,6 @@
 <script>
     $('.index-container').ready(function(){
         angular.bootstrap($('.index-container'), ['myApp']);
-
     })
 </script>
 </html>

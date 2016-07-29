@@ -190,7 +190,7 @@ footer div{
     overflow: hidden;
 
 }
-.HXM-tec-lunBo-ul{
+.HXM-tec-lunBo-ul,.idea-ul{
     position: relative;
     height: 100%;
     width: 100%;
@@ -205,10 +205,15 @@ footer div{
     right: 0;
     float: left;
 }
+.idea-ul li{
+    list-style: none;
+    width: 100%;
+    height: 100%;
+}
 .li-active{
     display: block!important;
 }
-.HXM-tec-lunBo-ul img{
+.HXM-tec-lunBo-ul img,.idea-ul img{
     height:400px;
     width: 100%
 }
@@ -554,3 +559,38 @@ footer div{
 .img-active .temp-desc{
     display: block;
 }
+
+/*================================idea================================*/
+.idea-head{
+    height:400px;
+    overflow: hidden;
+}
+.idea-ul li{
+    display: none;
+}
+.idea-li-active{
+    display: block!important;
+    opacity: 1!important;
+}
+.small-ul{
+    position: absolute;
+    height: 100%;
+    width: 200px;
+    top: 0;
+    right: 0;
+}
+.small-ul li{
+    list-style: none;
+    width: 100%;
+    height: 32%;
+    margin-top: 2%;
+    opacity: 0.5;
+}
+.small-ul li:hover{
+    opacity: 1;
+}
+.small-ul li img{
+    height: 100%;
+    width: 100%;
+}
+

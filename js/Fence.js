@@ -22,7 +22,7 @@
                 var sec=args.time;
                 private_methods.initLiIndex(ulClass,num);
                 private_methods.appendBtn($this,num);
-                private_methods.appendStyle($this,ulClass);
+                private_methods.appendStyle($this);
                 private_methods.btnBindEvent(ulClass,num,$this,sec);
                 clearInterval(picTimer);
                 picTimer = private_methods.getTimePicker(ulClass,num,sec);
@@ -44,11 +44,11 @@
         demoMethod : function(){
             console.log('private function');
         },
-        appendStyle:function($this,ulClass){
+        appendStyle:function($this){
             var style = '<style>\
             body,ul,li{ margin:0; padding:0}\
             ul,li{ list-style:none;}\
-            .'+ulClass+'{ position:absolute;padding:0;}\
+            .HXM-tec-lunBo-ul{ position:absolute;padding:0;}\
             .carouselBtn{ overflow:hidden; height:30px;position:absolute; bottom:3px; left:50%; margin-left:-100px;}\
             .carouselBtn li{ float:left; margin:0 10px; padding:5px; cursor:pointer; background: #ea644a;border:1px #ea644a solid;border-radius:12px; height:22px; width:22px; overflow:hidden; text-align:center; line-height:10px;opacity:0.6; float:left;}\
             .carouselBtn li.on{ background: #ea644a; color:white;}\
@@ -57,9 +57,9 @@
         },
         getTimePicker:function(ulClass,num,sec){
             clearInterval(picTimer);
-           return setInterval(function(){
-               private_methods.animateFunc(ulClass,num);
-           },sec);
+            return setInterval(function(){
+                private_methods.animateFunc(ulClass,num);
+            },sec);
         },
         initLiIndex:function(ulClass,num){
             for(var i=0;i<num;i++){
