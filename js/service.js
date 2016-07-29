@@ -5,11 +5,33 @@
 
     var app = angular.module('myApp', ['ngRoute']);
     app.controller('myCtrl', [ '$scope', function($scope) {
-            $scope.nav_active = sessionStorage.getItem('nav_active')||0;
-            $scope.ulClick = function(num){
-                $scope.nav_active = num;
-                sessionStorage.setItem('nav_active',num);
-            }
+        if(!sessionStorage.getItem('index-show')){
+            $('.index-bg').show();
+            sessionStorage.setItem('index-show',true);
+        }else{
+            $('.index-body').show();
+        }
+        $scope.nav_active = sessionStorage.getItem('nav_active')||0;
+        $scope.ulClick = function(num){
+            $scope.nav_active = num;
+            sessionStorage.setItem('nav_active',num);
+        };
+        setTimeout(function(){
+            $scope.goInside();
+        },5000);
+        $scope.goDetail = function(url){
+            $scope.goInside();
+            setTimeout(function(){
+                location.href = '#/'+url;
+            },1500);
+        };
+        $scope.goInside = function(){
+            $('.index-body').show();
+            $('.index-bg').animate({opacity:"0"},1500);
+            setTimeout(function(){
+                $('.index-bg').hide();
+            },1500);
+        }
     }]);
 
     app.provider('Repo',function(){

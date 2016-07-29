@@ -22,43 +22,64 @@
 
 </head>
 <body class="index-container" ng-controller="myCtrl">
-    <nav class="navbar navbar-default" id="nav_head">
-        <div class="container-fluid">
-            <div class="" id="nav_link">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="#/">黄晓萌的文艺梦</a>
+    <div class="index-bg" style="display: none">
+        <div class="index-show-head">
+            <span>黄晓萌的文艺梦</span>
+            <ul>
+                <li ng-click="goDetail('');ulClick(0)">主页</li>
+                <li ng-click="goDetail('life');ulClick(1)">生活小记</li>
+                <li ng-click="goDetail('tec');ulClick(2)">技术积累</li>
+                <li ng-click="goDetail('blogTemp');ulClick(3)">模板分享</li>
+                <li ng-click="goDetail('noobfan');ulClick(4)">noobfan</li>
+            </ul>
+        </div>
+        <span class="text-span">今天起，做一个努力的人！</span>
+        <div class="index-show-body">
+            <a class="btn" ng-click="goInside()">立即进入</a>
+        </div>
+        <div class="index-show-footer">
+            <span>我能做的就是让你入门更简单</span>
+        </div>
+    </div>
+    <div class="index-body" style="display: none;">
+        <nav class="navbar navbar-default" id="nav_head">
+            <div class="container-fluid">
+                <div class="" id="nav_link">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#/">黄晓萌的文艺梦</a>
+                    </div>
+                    <mynav></mynav>
                 </div>
-                <mynav></mynav>
             </div>
-        </div>
-    </nav>
-    <div ng-view></div>
-    <footer>
-        <div class="col-md-2 col-lg-2 footer-left">
-        </div>
-        <div class="col-md-4 col-lg-4 footer-middle">
-            <div class="col-md-6 col-lg-6">
-                <h3>友情链接：</h3>
-                <ul>
-                    <li><a href="http://www.noobfan.com">NoobFan</a></li>
-                    <li><a href="http://www.huangxiaomeng.top">黄晓萌的文艺梦</a></li>
-                </ul>
+        </nav>
+        <div ng-view></div>
+        <footer>
+            <div class="col-md-2 col-lg-2 footer-left">
             </div>
-            <div class="col-md-6 col-lg-6">
-                <h3>技术连接：</h3>
-                <ul>
-                    <li><a href="http://v3.bootcss.com/">BootStrap</a></li>
-                    <li><a href="http://www.bootcss.com/p/chart.js/">Chart.js</a></li>
-                    <li><a href="http://www.angularjs.cn/">AngularJs中文社区</a></li>
-                </ul>
+            <div class="col-md-4 col-lg-4 footer-middle">
+                <div class="col-md-6 col-lg-6">
+                    <h3>友情链接：</h3>
+                    <ul>
+                        <li><a href="http://www.noobfan.com">NoobFan</a></li>
+                        <li><a href="http://www.huangxiaomeng.top">黄晓萌的文艺梦</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-6">
+                    <h3>技术连接：</h3>
+                    <ul>
+                        <li><a href="http://v3.bootcss.com/">BootStrap</a></li>
+                        <li><a href="http://www.bootcss.com/p/chart.js/">Chart.js</a></li>
+                        <li><a href="http://www.angularjs.cn/">AngularJs中文社区</a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
-        <div class="col-md-4 col-lg-4 footer-right">
-            <h3>声明：</h3>
-            <span>本站所涉及技术分享及教程为免费分享，不站不对其正确性做保证，如有使用请自行负责。</span>
-            <b>本站保留所有权利</b>
-        </div>
-    </footer>
+            <div class="col-md-4 col-lg-4 footer-right">
+                <h3>声明：</h3>
+                <span>本站所涉及技术分享及教程为免费分享，不站不对其正确性做保证，如有使用请自行负责。</span>
+                <b>本站保留所有权利</b>
+            </div>
+        </footer>
+    </div>
 </body>
 <script>
     $('.index-container').ready(function(){
