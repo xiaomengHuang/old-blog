@@ -334,7 +334,18 @@
     }]);
 
     app.controller('ideaCtrl',['$scope',"Repo",function($scope,Repo){
-
+        $scope.animateFlag = true;
+        $('.small-ul li').off('click').on('click',function(){
+            var index = $(this).index();
+            var $idea = $('.idea-ul');
+            if($scope.animateFlag){
+                $scope.animateFlag = false;
+                $(this).addClass('idea-li-active').siblings().removeClass('idea-li-active');
+                $idea.animate({"bottom":index*400+'px'},1000,function(){
+                    $scope.animateFlag = true;
+                });
+            }
+        })
     }]);
     app.config(['$routeProvider', function($routeProvider){
 
@@ -346,17 +357,13 @@
             .when('/life',{
                 templateUrl:'./templates/life-temp.html'})
             .when('/detail',{
-                templateUrl:'./templates/article-detail.html'
-            })
+                templateUrl:'./templates/article-detail.html'})
             .when('/blogTemp',{
-                templateUrl:'./templates/blog-temp.html'
-            })
+                templateUrl:'./templates/blog-temp.html'})
             .when('/noobfan',{
-                templateUrl:'./templates/noobfan.html'
-            })
+                templateUrl:'./templates/noobfan.html'})
             .when('/idea',{
-                templateUrl:'./templates/idea-temp.html'
-            })
+                templateUrl:'./templates/idea-temp.html'})
             .otherwise({redirectTo:'/'});
     }]);
 

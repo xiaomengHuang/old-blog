@@ -206,6 +206,7 @@ footer div{
     float: left;
 }
 .idea-ul li{
+    position: relative;
     list-style: none;
     width: 100%;
     height: 100%;
@@ -564,9 +565,6 @@ footer div{
 .idea-head{
     height:400px;
     overflow: hidden;
-}
-.idea-ul li{
-    display: none;
 }
 .idea-li-active{
     display: block!important;
