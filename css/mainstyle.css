@@ -565,6 +565,7 @@ footer div{
 .idea-head{
     height:400px;
     overflow: hidden;
+    position: relative;
 }
 .idea-li-active{
     display: block!important;
@@ -592,3 +593,20 @@ footer div{
     width: 100%;
 }
 
+.my-ideas{
+    padding: 10px 20px!important;
+    position: relative;
+}
+.my-ideas:hover .my-ideas-type{
+    background: #000000;
+}
+.my-ideas-type{
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    background: rgba(0,0,0,0.5);
+    padding: 1px 4px!important;
+}
+.my-ideas-type span{
+    color: white;
+ }
