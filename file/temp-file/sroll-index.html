@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>全屏滚动</title>
+    <link href="css/style.css " rel="stylesheet" />
+    <link href="../../css/bootstrap.css" rel="stylesheet" />
+    <script src="../../js/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script src="../../js/bootstrap.js" type="text/javascript"></script>
+    <style type="text/css">
+
+        *{margin: 0;padding: 0;}
+        .page_contain{ height: 676px;width: 1360px;overflow: hidden;}
+        #inner_contain{ min-width: 1200px;min-height:600px;height: 100%;width: 100%;max-width: 1980px;max-height: 1020px;  position: relative;}
+        .page{height: 100%;width: 100%;}
+        .top_title{background: white;width: 800px;height: 60px;position: relative;top: 80px;left:calc(50% - 400px);}
+        .pis{border:1px white solid; overflow: hidden;}
+
+        .jumbotron{background:white;text-align: center;width:800px;position: relative;top: 120px;left:calc(50% - 400px);}
+        .row{margin: 0;padding: 0;}
+        .jumbotron h1{color: #353535;}
+        .jumbotron p{}
+        img{height: 200px;width: 100px;}
+        .m_hidden_show{background: white ;height: 50px;width: 50px;position: relative;float: left;left: 100px;top:16px;}
+        .m_hidden_show:after{clear: both;}
+
+        .down_div {background: white; height: 40px;width: 400px;text-align: center;position:relative; left: calc(50% - 200px); }
+        .down_div img{height: 30px;width: 76px;}
+
+        .salutation_bottom_fixed{position: fixed;bottom: 0;left: 0;right: 0;background: #353535;}
+        .salutation_bottom_fixed ul{list-style: none;margin-left: 260px;}
+        .salutation_bottom_fixed ul li{float: left;margin-left: 60px;}
+        .salutation_bottom_fixed ul li a{text-decoration:none;color:white;}
+        .salutation_bottom_fixed ul li a:hover{color: #e53d1c;}
+        .back_top{margin-left: 360px;}
+        /*旋转效果 ----------start*/
+        .m_circle
+        {
+            animation:m_circle 10s linear 2.2s infinite normal none;
+            -webkit-animation:m_circle 10s linear 2.2s infinite normal none; /*Safari and Chrome*/
+        }
+        @keyframes m_circle
+        {
+            from {
+                transform: rotate(0deg);
+                    -webkit-transform:rotate(0deg);
+                    -moz-transform: rotate(0deg);
+                    -o-transform: rotate(0deg);}
+            to {
+               transform: rotate(360deg);
+                -webkit-transform:rotate(360deg);
+                -moz-transform: rotate(360deg);
+                -o-transform: rotate(360deg);
+            }
+        }
+        @-webkit-keyframes m_circle /*Safari and Chrome*/
+        {
+            from {transform: rotate(0deg);
+                -webkit-transform:rotate(0deg);
+                -moz-transform: rotate(0deg);
+                -o-transform: rotate(0deg);}
+            to {transform: rotate(360deg);
+                -webkit-transform:rotate(360deg);
+                -moz-transform: rotate(360deg);
+                -o-transform: rotate(360deg);
+            }
+        }
+        /*旋转效果 ----------end*/
+        /*滑动效果-----start*/
+        .m_float{
+            animation:m_float 2s  infinite normal none;
+            -webkit-animation:m_float 2s  infinite normal none; /*Safari and Chrome*/
+        }
+        @keyframes m_float
+        {
+            from{left: -120px;}
+            to{left: 200px;}
+
+        }
+        @-webkit-keyframes m_float /*Safari and Chrome*/
+        {
+            from {
+                left: -200px;
+            }
+            to {
+                left: 200px;
+            }
+
+        }
+        /*滑动效果--------end*/
+        /*DOWN滑动效果-----start*/
+        .m_down{
+            animation:m_down 1.5s ease-in-out infinite alternate none;
+            -webkit-animation:m_down 1.5s ease-in-out  infinite alternate none; /*Safari and Chrome*/
+        }
+        @keyframes m_down
+        {
+            from{bottom:-180px;}
+            to{bottom:-200px;}
+
+        }
+        @-webkit-keyframes m_down /*Safari and Chrome*/
+        {
+            from{bottom:-180px;}
+            to{bottom:-200px;}
+        }
+        /*DOWN滑动效果--------end*/
+        /*放大效果-------start*/
+        .m_cbig{
+            animation:m_cbig 2s  infinite alternate none;
+            -webkit-animation:m_cbig 2s  infinite alternate none; /*Safari and Chrome*/
+        }
+        @keyframes m_cbig
+        {
+            from{transform: scale(1);
+                -webkit-transform:scale(1);
+                -moz-transform:scale(1);
+                -o-transform: scale(1);}
+            to{transform: scale(1.25);
+                -webkit-transform:scale(1.25);
+                -moz-transform:scale(1.25);
+                -o-transform: scale(1.25);}
+
+        }
+        @-webkit-keyframes m_cbig /*Safari and Chrome*/
+        {
+            from{transform: scale(1);
+                -webkit-transform:scale(1);
+                -moz-transform:scale(1);
+                -o-transform: scale(1);}
+            to{transform: scale(1.2);
+                -webkit-transform:scale(1.2);
+                -moz-transform:scale(1.2);
+                -o-transform: scale(1.2);}
+
+        }
+        /*放大效果-------end*/
+        /*旋转效果  ___Y----------start*/
+        .m_circle_y
+        {
+            animation:m_circle_y 2s linear infinite alternate none;
+            -webkit-animation:m_circle_y 2s linear  infinite alternate none; /*Safari and Chrome*/
+        }
+        @keyframes m_circle_y
+        {
+            from {color:#ea644a;transform: rotateY(0deg);
+                -webkit-transform:rotateY(0deg);
+                -moz-transform: rotateY(0deg);
+                -o-transform: rotateY(0deg);}
+            to {color:#03b8cf;transform: rotateY(360deg);
+                -webkit-transform:rotateY(360deg);
+                -moz-transform: rotateY(360deg);
+                -o-transform: rotateY(360deg);
+            }
+        }
+        @-webkit-keyframes m_circle_y /*Safari and Chrome*/
+        {
+            from {transform: rotateY(0deg);
+                -webkit-transform:rotateY(0deg);
+                -moz-transform: rotateY(0deg);
+                -o-transform: rotateY(0deg);}
+            to {transform: rotateY(360deg);
+                -webkit-transform:rotateY(360deg);
+                -moz-transform: rotateY(360deg);
+                -o-transform: rotateY(360deg);
+            }
+        }
+        /*旋转效果 _____Y----------end*/
+
+
+        /*淡出效果-----start*/
+        .m_hidden_show{
+            animation:m_hidden_show 2s linear  infinite normal none;
+            -webkit-animation:m_hidden_show 2s linear  infinite normal none; /*Safari and Chrome*/
+        }
+        @keyframes m_hidden_show
+        {
+            from{ opacity: 1; }
+            to{opacity: 0;}
+
+        }
+        @-webkit-keyframes m_hidden_show /*Safari and Chrome*/
+        {
+            from{ opacity: 1; }
+            to{opacity: 0;}
+        }
+        /*淡出效果--------end*/
+
+
+        /*旋转效果  ___x----------start*/
+        .m_circle_x
+        {
+            animation:m_circle_x 1.5s linear   infinite alternate none;
+            -webkit-animation:m_circle_x 1.5s linear   infinite alternate none; /*Safari and Chrome*/
+        }
+        @keyframes m_circle_x
+        {
+            from {color: red;
+                transform: rotate(0deg);
+                -webkit-transform:rotate(0deg);
+                -moz-transform: rotate(0deg);
+                -o-transform: rotate(0deg);}
+            to {color:green;transform: rotate(50deg);
+                -webkit-transform:rotate(50deg);
+                -moz-transform: rotate(50deg);
+                -o-transform: rotate(50deg);
+            }
+        }
+        @-webkit-keyframes m_circle_x /*Safari and Chrome*/
+        {
+            from {color: red;transform: rotate(0deg);
+                -webkit-transform:rotate(0deg);
+                -moz-transform: rotate(0deg);
+                -o-transform: rotate(0deg);}
+            to {color:green;transform: rotate(50deg);
+                -webkit-transform:rotate(50deg);
+                -moz-transform: rotate(50deg);
+                -o-transform: rotate(50deg);
+            }
+        }
+        /*旋转效果 _____X---------end*/
+
+    </style>
+
+    <script>
+        $(function(){
+//            var ava_height=window.screen.availHeight;
+//            var ava_width=window.screen.availWidth;
+//            $(".page_contain").css({"height":ava_height});
+////            alert(ava_height);
+//            $(".page_contain").css({"width":ava_width});
+////            alert(ava_width);
+        })
+        /*滚动翻页效果---------开始*/
+        $(function(){
+            if (navigator.userAgent.indexOf('Firefox') >= 0) {
+                var scrollFunc = function (e) {
+                    e = e || window.event;
+                    if (e.detail > 0) {
+                            if(!$("#inner_contain").is(":animated")) {
+                                up();
+                            }
+                    } else {
+                        if(!$("#inner_contain").is(":animated")){
+                            down();
+                        }
+                    }
+                }
+            }else{
+                var scrollFunc = function (e) {
+                    e = e || window.event;
+                    if (e.wheelDelta > 0) {
+                        if(!$("#inner_contain").is(":animated")){
+                            down();
+                        }
+                    } else {
+                        if(!$("#inner_contain").is(":animated")){
+                            up();
+                        }
+                    }
+                }
+            }
+            /*注册事件*/
+            if(document.addEventListener){
+                document.addEventListener('DOMMouseScroll',scrollFunc,false);
+            }//W3C
+            window.onmousewheel=document.onmousewheel=scrollFunc;//IE/Opera/Chrome/Safari
+            if(document.addEventListener){
+                document.addEventListener('DOMMouseScroll',scrollFunc,false);
+            }
+        });
+
+        var bot_len =0;
+        function up() {
+            var len =  3;
+            if (bot_len == len) {
+
+            } else {
+                $("#inner_contain").animate({bottom: '+=100%'}, 1500);
+                bot_len+=1;
+            }
+        };
+
+        function down(){
+
+            if(bot_len==0){
+
+            }else
+            {
+                $("#inner_contain").animate({bottom:'-=100%'},1500);
+                bot_len-=1;
+            }
+
+        };
+        /*滚动翻页效果---------end*/
+
+        /*回到顶部*/
+        $(function(){
+            $("#back_top").click(function(){
+                $("#inner_contain").animate({bottom: '0'}, 1500);
+                bot_len=0;
+            });
+        })
+        /*下一页*/
+        $(function(){
+           $(".m_down").click(function(){
+               $("#inner_contain").animate({bottom: '+=100%'}, 1500);
+               bot_len+=1;
+           });
+        });
+    </script>
+</head>
+<body>
+    <div class="container-fluid row" style="position: absolute;top: 0;bottom: 0;left: 0;right: 0;">
+        <div class="page_contain col-lg-12 col-md-12 col-sm-12" id="page_contain"  style="height:100%;width: 100%;background: url('img/bg.jpg') no-repeat 100% 100%">
+            <div class="inner_contain" id="inner_contain">
+                <div class="page" >
+                    <div class="top_title" ></div>
+                    <div class="jumbotron row" >
+                        <h1>What Can We Do ?</h1>
+                        <p>除了假，什么都能做！</p>
+                        <div class="col-md-4 pis ">
+                            <h1 class="glyphicon glyphicon-bookmark m_circle_y "></h1>
+                            <p>我们提供完美的<br/>轻量级网站解决方案</p>
+                        </div>
+                        <div class="col-md-4 pis">
+                            <h1 class="glyphicon glyphicon-remove m_circle_x "></h1>
+                            <p>我们提供合适的<br/>轻量级页面增删方案</p>
+                        </div>
+                        <div class="col-md-4 pis ">
+                            <h1 class="glyphicon glyphicon-export "></h1>
+                            <div class="m_hidden_show"></div>
+                            <p>我们提供便捷的<br/>轻量级功能实现方案</p>
+                        </div>
+                    </div>
+                    <div class="down_div m_down"><img src="img/down_pic.png " /></div>
+                </div>
+                <div class="page " >
+                    <div class="top_title" ></div>
+                    <div class="jumbotron row" >
+                        <h1>Time is Money</h1>
+                        <p>我们敢于承认“短”</p>
+                        <div class="col-md-4 pis">
+                            <h1 class="glyphicon glyphicon-list-alt m_float"></h1>
+                            <p>我们提供<br />最快速的方案定制</p>
+                        </div>
+                        <div class="col-md-4 pis">
+                            <h1 class="glyphicon glyphicon-time m_cbig"></h1>
+                            <p>我们提供<br />最快速的开发流程</p>
+                        </div>
+                        <div class="col-md-4 pis ">
+                            <h1 class="glyphicon glyphicon-cog m_circle "></h1>
+                            <p>我们提供<br />最快速的功能实现</p>
+                        </div>
+                    </div>
+                    <div class="down_div m_down"><img src="img/down_pic.png " /> </div>
+                </div>
+                <div class="page" >
+                    <div class="top_title" ></div>
+                    <div class="jumbotron row" >
+                        <h1>Success Case</h1>
+                        <p>除了我们自己还有你</p>
+                        <div class="col-md-6 pis ">
+                            <a ><img src="img/tnc.png"  style="height: 50px;width: 100px;"/></a>
+                            <p>创业伊始<br />不知何为困难</p>
+                        </div>
+                        <div class="col-md-6 pis ">
+                            <div style="height: 50px;width: 100px;"></div>
+                            <p>虚位以待<br />期待你的选择</p>
+                        </div>
+
+                    </div>
+                    <div class="down_div m_down"><img src="img/down_pic.png " /> </div>
+                </div>
+                <div class="page" >
+                    <div class="top_title" ></div>
+                    <div class="jumbotron row" >
+                        <h1>Development Related</h1>
+                        <p>我们快速开发的依托</p>
+                        <div class="col-md-4 pis ">
+                            <a href="http://www.zui.sexy/"><img src="img/zui.png"  style="height: 80px;width: 80px;"/></a>
+                            <p>ZUI框架</p>
+                        </div>
+                        <div class="col-md-4 pis ">
+                            <a href="http://www.bootcss.com/"><img src="img/bootstrap.png " style="height: 80px;width:80px;"/> </a>
+                            <p>bootstrap框架</p>
+                        </div>
+                        <div class="col-md-4 pis ">
+                            <a href="#"><img src="img/me.png " style="height: 80px;width: 80px;"/> </a>
+                            <p>我们自己的插件</p>
+                        </div>
+
+                        <nav class="salutation_bottom_fixed">
+                            <ul class="nav_inner">
+                                <li  class="active"><a href="http://www.huangxiaomeng.top"><h4>主页</h4></a></li>
+                                <li ><a href="http://www.huangxiaomeng.top"><h4>新闻中心</h4></a></li>
+                                <li ><a href="http://www.huangxiaomeng.top"><h4>联系我们</h4></a></li>
+                                <li ><a href="http://www.huangxiaomeng.top"><h4>关于我们</h4></a></li>
+                                <li ><a href="http://www.huangxiaomeng.top"><h4>关注订阅</h4></a></li>
+                                <li><a  id="back_top"><h4 class="glyphicon glyphicon-plane back_top"></h4></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

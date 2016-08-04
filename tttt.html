@@ -37,3 +37,21 @@
 </body>
 
 </html>
+<script>
+    function a(name,age){
+        this.name = name;
+        this.age = age;
+    }
+    a.prototype = {
+        print:function(){
+            console.log('dadasd');
+        }
+    }
+    //下面是继承
+    function b(){
+
+    }
+    b.prototype = new a();
+    b.print();
+
+</script>

@@ -1,4 +1,11 @@
 {
+  "2":
+  {
+    "img":"lib/img/share/share-2.jpg",
+    "src":"file/temp-file/scroll-index.html",
+    "title":"bootstrap搭建的全屏滚动页面",
+    "desc":"灵感来自于百度浏览器页面，全屏滚动切换，这里只是没做其他的一些动画。"
+  },
   "1":
   {
     "img":"lib/img/share/share-1-1.jpg",
