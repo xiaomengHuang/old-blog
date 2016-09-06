@@ -3,7 +3,7 @@
  */
 !function(){
 
-    var app = angular.module('myApp', ['ngRoute']);
+    var app = angular.module( 'myApp', ['ngRoute']);
     app.controller('myCtrl', [ '$scope', function($scope) {
         if(!sessionStorage.getItem('index-show')){
             $('.index-bg').show();
@@ -68,6 +68,22 @@
                 replace: true
             };
         });
+    //切换页面显示加载中。。。
+    app.directive('loading',['$rootScope',function($rootScope){
+        return {
+            link:function(scope,element,attrs){
+                element.addClass('hide');
+
+                $rootScope.$on('$routeChangeStart',function(){
+                    element.removeClass('hide');
+                });
+
+                $rootScope.$on('$routeChangeSuccess',function(){
+                    element.addClass('hide');
+                })
+            }
+        }
+    }]);
 
     app.controller('myIndexCtrl', [ '$scope','Repo', function($scope,Repo) {
         $scope.article = [];
