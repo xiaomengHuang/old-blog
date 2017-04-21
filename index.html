@@ -1,89 +1,36 @@
 <!DOCTYPE html>
-<html>
-<head lang="en">
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <title>黄晓萌的个人博客---向风口前进的童鞋</title>
-    <meta name="keywords" content="黄晓萌，个人博客，前端个人博客，技术分享，影评，黄晓萌的博客">
-    <meta name="description" content="黄晓萌，个人生活博客和技术分享博客，记录个人的点滴事件。">
-    <link href="css/bootstrap.css" rel="stylesheet"/>
-    <link rel="shortcut icon" href="./lib/img/icon.ico" />
-    <link rel="bookmark" href="./lib/img/icon.ico"/>
-    <link href="css/mainstyle.css" rel="stylesheet" />
-    <script src="js/jquery-1.10.2.min.js" ></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/github.js"></script>
-    <script src="lib/angular.js"></script>
-    <script src="lib/angular-route.js"></script>
-    <script src="lib/Chart.js"></script>
-    <script src="js/service.js"></script>
-    <script src="js/Carousel.js"></script>
-    <script src="lib/markdown.min.js"></script>
-
+    <title>小学生公开课</title>
+    <link rel="stylesheet" href="css/new_mainstyle.css">
 </head>
-<body class="index-container" ng-controller="myCtrl">
-    <div class="index-bg" style="display: none">
-        <div class="index-show-head">
-            <span>黄晓萌的文艺梦</span>
+<body>
+    <div class="page-container">
+        <header>
+            <span class="logo">POWERED BY : 前端小学生</span>
             <ul>
-                <li ng-click="goDetail('');ulClick(0)">主页</li>
-                <li ng-click="goDetail('life');ulClick(1)">生活小记</li>
-                <li ng-click="goDetail('tec');ulClick(2)">技术积累</li>
-                <li ng-click="goDetail('blogTemp');ulClick(3)">模板分享</li>
-                <li ng-click="goDetail('noobfan');ulClick(4)">noobfan</li>
-                <li ng-click="goDetail('idea');ulClick(5)">观点</li>
+                <li>主页</li>
+                <li>作品</li>
+                <li>教程</li>
             </ul>
+        </header>
+        <div class="body-container">
+            <div class="body-inner">
+                <span class="big-span">L</span>
+                <span class="small-span">E</span>
+                <span class="small-span">S</span>
+                <span class="small-span">S</span>
+                <span class="hidden">Z</span>
+                <span class="big-span">I</span>
+                <span class="small-span">S</span>
+                <span class="hidden">Z</span>
+                <span class="big-span">M</span>
+                <span class="small-span">O</span>
+                <span class="small-span">R</span>
+                <span class="small-span">E</span>
+            </div>
         </div>
-        <span class="text-span">今天起，做一个努力的人！</span>
-        <div class="index-show-body">
-            <a class="btn" ng-click="goInside()">立即进入</a>
-        </div>
-        <div class="index-show-footer">
-            <span>我能做的就是让你入门更简单</span>
-        </div>
-    </div>
-    <div class="index-body" style="display: none;">
-        <nav class="navbar navbar-default" id="nav_head">
-            <div class="container-fluid">
-                <div class="" id="nav_link">
-                    <div class="navbar-header">
-                        <a class="navbar-brand" href="#/">黄晓萌的文艺梦</a>
-                    </div>
-                    <mynav></mynav>
-                </div>
-            </div>
-        </nav>
-        <div ng-view></div>
-        <footer>
-            <div class="col-md-2 col-lg-2 footer-left">
-            </div>
-            <div class="col-md-4 col-lg-4 footer-middle">
-                <div class="col-md-6 col-lg-6">
-                    <h3>友情链接：</h3>
-                    <ul>
-                        <li><a href="http://www.noobfan.com">NoobFan</a></li>
-                        <li><a href="http://www.huangxiaomeng.top">黄晓萌的文艺梦</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-6 col-lg-6">
-                    <h3>技术连接：</h3>
-                    <ul>
-                        <li><a href="http://v3.bootcss.com/">BootStrap</a></li>
-                        <li><a href="http://www.bootcss.com/p/chart.js/">Chart.js</a></li>
-                        <li><a href="http://www.angularjs.cn/">AngularJs中文社区</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-4 col-lg-4 footer-right">
-                <h3>声明：</h3>
-                <span>本站所涉及技术分享及教程为免费分享，不站不对其正确性做保证，如有使用请自行负责。</span>
-                <b>本站保留所有权利</b>
-            </div>
-        </footer>
     </div>
 </body>
-<script>
-    $('.index-container').ready(function(){
-        angular.bootstrap($('.index-container'), ['myApp']);
-    })
-</script>
 </html>
