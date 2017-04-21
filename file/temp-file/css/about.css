@@ -1,0 +1,227 @@
+*,html,body,div,p,span,h3,h4,ul,li,.container-fluid,.row,
+.col-lg-4,.col-lg-8,.col-md-4,.col-md-8,.col-sm-8,
+.col-sm-4,.col-md-6,.col-lg-6{
+    font-family: "Microsoft YaHei";
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+p{
+    line-height:22px;
+}
+.container-fluid{
+    min-width:968px;
+    margin-top:10px;
+}
+#carousel-example-generic,.row{
+    width: 968px;
+    margin:auto;
+}
+header{
+    height:62px;
+    width: 100%;
+    min-width: 968px;
+    background-color: #f8f8f8;
+}
+.header-bg{
+    width: 968px;
+    height:100%;
+    background:url('../header-bg.png');
+    margin:0 auto;
+}
+nav{
+    height:32px;
+    width: 100%;
+    min-width: 968px;
+    background-color: #c5dbf2;
+}
+nav>ul{
+    width: 968px;
+    list-style: none;
+    margin:2px auto 0;
+}
+nav>ul>li{
+    float: left;
+    font-size: 14px;
+    width: 94px;
+    text-align: center;
+    height: 32px;
+    line-height: 32px;
+    border-right: 1px solid #fff;
+    transition: all 1s;
+    cursor: pointer;
+}
+.clear-fix::after{
+    display: block;
+    visibility: hidden;
+    content: "";
+    height: 0;
+    width: 0;
+    clear: both;
+    zoom: 1;
+}
+nav>ul>li:first-child{
+    border-left:1px solid #fff;
+    margin-left: 14px;
+}
+nav>ul>li:hover{
+    background-color: #2687eb;
+    color: white;
+}
+.carousel-container{
+    width: 968px;
+    height:auto;
+    max-height: 300px;
+    overflow: hidden;
+    margin:0 auto;
+    padding-top: 10px;
+}
+.detail-container{
+    width: 988px;
+    height:auto;
+    margin:0 auto;
+}
+.nav-container ul{
+    list-style: none;
+}
+.nav-container ul li{
+    position: relative;
+}
+.nav-container ul li::before{
+    height: 0;
+    width: 0;
+    border:6px solid transparent;
+    border-left:6px solid black;
+    display: block;
+    position: absolute;
+    left:-20px;
+    top: 0;
+    content: "";
+}
+.carousel-inner{
+    height:400px;
+}
+.carousel-inner>.item{
+    height:100%;
+}
+.row{
+    padding: 10px 0;
+}
+.company-left{
+    padding-right:10px;
+}
+.panel-default{
+    height:228px;
+    border-radius: 0;
+}
+.panel-default h3{
+    display: inline-block;
+}
+.panel-default span{
+    font-size: 18px;
+    margin-left: 4px;
+}
+/*=============news part======================*/
+.news-left>.news-container{
+    padding-right: 5px;
+}
+.news-right>.news-container{
+    padding-left:5px;
+}
+.news-left .news-list,.news-right .news-list{
+    border: 1px solid #ddd;
+    padding: 4px 20px;
+    width: 100%;
+    margin-top: 10px;
+}
+.news-left h3,.news-right h3{
+    margin-left: 20px;
+}
+.news-container ul li{
+    line-height: 20px;
+    position: relative;
+}
+.news-container ul li::before{
+    height: 0;
+    width: 0;
+    border: 6px solid transparent;
+    border-left: 6px solid #aaa;
+    display: block;
+    position: absolute;
+    left: -10px;
+    top: 4px;
+    content: "";
+}
+.news-container ul li a{
+    display: inline-block;
+    width: 350px;
+    word-break: break-all;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.news-time{
+    float: right;
+    margin-right: 4px;
+    font-size: 12px;
+    line-height: 20px;
+}
+/*======================float part=================================*/
+.float-container{
+    width: 968px;
+    height: auto;
+    margin: auto;
+}
+.float-container h3{
+    margin-left:20px;
+}
+.float-inner{
+    padding: 10px;
+    height: auto;
+    width: auto;
+    border: 1px solid #ddd;
+    margin: 10px 0;
+}
+.float_container{
+    height: 100px;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    position:relative
+}
+.float_container p{
+    text-align:center;}
+.float_container ul{
+    margin:0px;
+    padding:0px;
+    list-style:none;
+    width:1500px;}
+.float_container ul:hover{
+    cursor:pointer;
+}
+.float_container ul li{
+    float:left;
+}
+.float_container ul img{
+    width:210px;
+    height:100px;
+}
+/*==================footer part==========================*/
+footer{
+    height:100px;
+    width: 100%;
+    background: #333;
+}
+.footer-container{
+    height:100px;
+    width: 968px;
+    text-align: center;
+    margin: auto;
+    padding-top: 34px;
+}
+.footer-container span{
+    color: white;
+    display: block;
+}

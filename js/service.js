@@ -380,6 +380,9 @@
                 templateUrl:'./templates/noobfan.html'})
             .when('/idea',{
                 templateUrl:'./templates/idea-temp.html'})
+            .when('/baojie',{
+                templateUrl:'./templates/about.html'
+            })
             .otherwise({redirectTo:'/'});
     }]);
 
